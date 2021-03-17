@@ -2,13 +2,13 @@ require_relative 'boot'
 
 require 'rails/all'
 
+config.assets.js_compressor = Uglifier.new(harmony: true)
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 module CharmTunes
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.assets.js_compressor = Uglifier.new(harmony: true)
     
     config.load_defaults 5.2
 
