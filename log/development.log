@@ -984,3 +984,537 @@ Completed 200 OK in 201ms (Views: 0.1ms | ActiveRecord: 4.6ms)
   [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "uwuwuwuwuwuwuwu"], ["LIMIT", 1]]
   [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "uwuwuwuwuwuwuwu"], ["username", "uwuwuwuwuwu"], ["password_digest", "$2a$12$2IRyGFYsbosBMlRXbV0Kqeo3XYbaLn8G9zSCkX.JZ0BWUvNF8iZfC"], ["session_token", "6QqNL4wvZAL73TV0DqopXQ"], ["created_at", "2021-03-18 18:25:49.633831"], ["updated_at", "2021-03-18 18:25:49.633831"]]
   [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/users" for ::1 at 2021-03-18 14:32:49 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"uwuaaaaaaaaaa", "email"=>"uwuwuwuwuaaaaaaaaa", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (37.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "uwuaaaaaaaaaa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "uwuwuwuwuaaaaaaaaa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "uwuwuwuwuaaaaaaaaa"], ["username", "uwuaaaaaaaaaa"], ["password_digest", "$2a$12$uu91cMvAXjv86NzpkUNC.OBRSTSsZSm/CPTn0yRkxEMRvo9KLVhJi"], ["session_token", "XW27LKxE6-2FEKRx8ffrsg"], ["created_at", "2021-03-18 18:32:50.235203"], ["updated_at", "2021-03-18 18:32:50.235203"]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 252ms (Views: 4.2ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:33:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-03-18 14:33:26 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"aaaaaaaaaa", "email"=>"crying@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "aaaaaaaaaa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "crying@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "crying@gmail.com"], ["username", "aaaaaaaaaa"], ["password_digest", "$2a$12$FErq154rdqzTVSyuwEr1h.waYHC/bi6Mz5KfT.7zSMFVQHYNmDfES"], ["session_token", "7kI6MZq0MTHOUxYexj1CLg"], ["created_at", "2021-03-18 18:33:27.088047"], ["updated_at", "2021-03-18 18:33:27.088047"]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 191ms (Views: 4.3ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/users" for ::1 at 2021-03-18 14:34:22 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"aaaaaaaaaaa", "email"=>"cryingaaa@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "aaaaaaaaaaa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cryingaaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "cryingaaa@gmail.com"], ["username", "aaaaaaaaaaa"], ["password_digest", "$2a$12$/q5BcGcZuoQDlmwSl8nuG.BZdRa.R.V8LEH4m8L0NAWwntNw9N50O"], ["session_token", "G7E-Z-vbhvty2-tE-j5qoA"], ["created_at", "2021-03-18 18:34:22.751574"], ["updated_at", "2021-03-18 18:34:22.751574"]]
+  ↳ app/controllers/api/users_controller.rb:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 194ms (Views: 5.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:36:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 269ms (Views: 267.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:38:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 259ms (Views: 257.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:43:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 265ms (Views: 263.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:45:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms)
+
+
+
+Errno::ENOENT - No such file or directory @ apply2files - /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/tmp/cache/assets/sprockets/v3.0/Ui/UiC_GbVAZ5IaS5cPn2QWz3UFQnzQEzWiVNgDjl1CIUM.cache.70368582568040.5352.604418:
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3403011953622231236_69821616785840'
+
+Started POST "/__better_errors/12c33faaa4e24cb8/variables" for ::1 at 2021-03-18 14:45:59 -0400
+Started GET "/" for ::1 at 2021-03-18 14:46:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 236ms (Views: 234.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:49:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 317ms (Views: 315.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:49:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:55:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.9ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:56:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:57:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 262ms (Views: 260.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:58:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 14:59:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:00:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:00:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:00:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:02:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 297ms (Views: 296.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:02:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:03:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:03:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:03:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:05:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:05:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:05:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:05:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:08:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 296ms (Views: 295.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:09:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:13:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 267ms (Views: 265.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:13:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:19:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 337ms (Views: 336.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:20:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:20:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:20:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:21:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:21:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:21:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:22:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 254ms (Views: 253.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:22:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:22:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:22:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:23:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.7ms)
+Completed 200 OK in 257ms (Views: 256.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:26:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:27:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:27:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:27:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:28:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:29:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:30:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:34:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 299ms (Views: 298.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:35:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:35:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:36:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:36:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:38:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:38:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:39:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:39:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:44:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:46:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:46:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:47:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.0ms)
+
+
+
+Errno::ENOENT - No such file or directory @ apply2files - /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/tmp/cache/assets/sprockets/v3.0/JY/JYJP59DIFp5ZFc2haNDX3IUD5YcyOdINi8bX0V74hTo.cache.70368582567900.5352.661524:
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3403011953622231236_69821617666100'
+
+Started POST "/__better_errors/b58b2b8e7ad70af1/variables" for ::1 at 2021-03-18 15:47:05 -0400
+Started GET "/" for ::1 at 2021-03-18 15:47:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 143ms (Views: 141.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:47:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 253ms (Views: 251.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:49:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:49:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 15:54:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-18 16:07:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 85ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+

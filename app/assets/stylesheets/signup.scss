@@ -1,0 +1,57 @@
+body{
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    line-height: 26px;
+}
+.signupform {
+    display: flex;
+    max-width: 450px;
+    flex-direction: column;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 700;
+}
+#formlabel{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.input {
+    padding: 10px;
+    padding-block: 15px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+#formheader {
+    text-align: center;
+}
+#formtitle {
+    font-size: 18px;
+    font-weight: 700px;
+    text-align: center;
+}
+
+.signupbutton {
+    
+    background-color: rgb(29, 185, 84);
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px;
+    transform: scale(1.00);
+    border: 1px solid rgb(29, 185, 84);
+    border-radius: 30px;
+    cursor: pointer;
+}
+.signupbutton:hover{
+    
+    background-color: rgb(30, 215, 96);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    transform: scale(1.04);
+    border: 1px solid rgb(30, 215, 96);
+    border-radius: 30px;
+}
