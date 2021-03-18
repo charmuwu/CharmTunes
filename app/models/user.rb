@@ -1,9 +1,10 @@
 class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
     validates :username, :email, presence: true, uniqueness: true
-    validates :session_token, presence: true, uniqueness: true
-    validates :date_of_birth, :country_or_region, :profile_name, presence: true
-    validates :plan, inclusion: { in: %w(free premium)}
+    validates :password_digest, presence: true
+    # validates :session_token, presence: true, uniqueness: true
+    # validates :date_of_birth, :country_or_region, :profile_name, allow_nil: true
+    
     
     attr_reader :password
 
