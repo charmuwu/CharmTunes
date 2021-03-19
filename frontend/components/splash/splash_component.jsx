@@ -6,18 +6,22 @@ class SplashComponent extends React.Component{
         super(props)
     }
     render(){
-        const ifLoggedin = () => (
-            <div>
-                <Link to="/login">LOG IN</Link>
-                <Link to="/signup">SIGN UP</Link>
-            </div>
-        )
         const ifLoggedOut = () => (
-            <div>
-                <input type="submit" onClick={this.props.logout} value="Log Out"/>
+            <div className="splashbuttons">
+                <Link className="splashsignup" to="/signup">SIGN UP</Link>
+                <Link className="splashlogin" to="/login">LOG IN</Link>
             </div>
         )
-        return this.props.currentUser ? ifLoggedOut() : ifLoggedin()
+        const ifLoggedIn = () => (
+            <div>
+                <input className="splashlogout" type="submit" onClick={this.props.logout} value="Log Out"/>
+            </div>
+        )
+        return (
+            
+            this.props.currentUser ? ifLoggedIn() : ifLoggedOut()
+            
+        )
                 
             
         

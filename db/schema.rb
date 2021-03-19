@@ -15,31 +15,6 @@ ActiveRecord::Schema.define(version: 2021_03_16_132737) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artists", force: :cascade do |t|
-    t.integer "song_id"
-    t.integer "album_id"
-  end
-
-  create_table "likes", force: :cascade do |t|
-    t.string "user_id"
-    t.string "playlist_id"
-    t.string "song_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["playlist_id", "user_id"], name: "index_likes_on_playlist_id_and_user_id", unique: true
-    t.index ["song_id", "user_id"], name: "index_likes_on_song_id_and_user_id", unique: true
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.string "album"
-    t.string "title"
-    t.string "length"
-    t.string "artist"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "username"

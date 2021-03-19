@@ -1,0 +1,35 @@
+.test{
+    background-color: #121212;
+    width: 100%;
+    height: 100%;
+}
+.splashbuttons{
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+.splashlogin{
+    font-weight: 700;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    width: 110px;
+    margin-right: 20px;
+}
+.splashsignup{
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.splashlogout{
+
+}
+// #b3b3b3
