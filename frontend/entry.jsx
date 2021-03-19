@@ -6,8 +6,21 @@ import { postUser , postSession, deleteSession } from './utils/session_api_util'
 import {signup} from './actions/session_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
-    const store = configureStore();
+    let preloadedState = undefined;
+    if(window.currentUser){
+        preloadedState = {
+            entities: {
+                users: {
+                    [window.currentUser.id]: window.currentUser,
+                }
+            },
+            session: {
+                currentUser: currentUser.id,
+            }
+        }
+    }
     const root = document.getElementById("root");
+    const store = configureStore(preloadedState);
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.signup = signup;

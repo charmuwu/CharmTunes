@@ -9,7 +9,6 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => {
-  debugger
   return{
     action: user => dispatch(signup(user)),
     resetErrors: () => dispatch(resetErrors())
