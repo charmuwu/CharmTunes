@@ -62,6 +62,8 @@ class SignUpForm extends React.Component {
                     value={this.state.password}
                     onChange={this.update('password')}
                 />
+                <p className="terms" id="terms">By clicking on Sign up, you agree to CharmTunes's <a href="https://www.youtube.com/watch?v=Q5BNLaZWdck">Terms and Conditions of Use.</a></p>
+                <p className="terms">To learn more about how CharmTunes collects, uses, shares and protects your personal data please read CharmTunes's <a href="https://www.youtube.com/watch?v=fUIe4dSO2zg">Privacy Policy.</a></p>
                 <button type='submit' className="signupbutton">SIGN UP</button>
             </form>
         </div>
