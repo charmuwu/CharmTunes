@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 class SignUpForm extends React.Component {
     constructor(props) {
       super(props);
@@ -11,10 +11,23 @@ class SignUpForm extends React.Component {
   
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
+    componentDidMount(){
+      this.props.resetErrors();
+    }
+    renderErrors() {
+      return(
+        <div>
+          {this.props.errors.map((error, id) => (
+            <p key={id}>{error}</p>
+          ))}
+        </div>  
+      )
+    }
     handleSubmit(e) {
+      debugger
       e.preventDefault();
-      this.props.action(this.state);
+      this.props.action(this.state)
+      .then(() => this.props.history.push("/"));
     }
   
     update(field) {
@@ -29,6 +42,7 @@ class SignUpForm extends React.Component {
             <br/>
             <h3 id="formtitle">Sign up with your email address</h3>
             <form onSubmit={this.handleSubmit} className="signupform">
+                {this.renderErrors()}
                 <label id="formlabel" htmlFor="email">
                     What's your email?
                 </label>
@@ -66,6 +80,11 @@ class SignUpForm extends React.Component {
                 <p className="terms">To learn more about how CharmTunes collects, uses, shares and protects your personal data please read CharmTunes's <a href="https://www.youtube.com/watch?v=fUIe4dSO2zg">Privacy Policy.</a></p>
                 <button type='submit' className="signupbutton">SIGN UP</button>
             </form>
+            <div id="login123">
+              <h3 className="login123" className="terms">Have an account? &nbsp;
+                <Link to="/login" className="login123" className="terms">Log In</Link>
+              .</h3>
+            </div>
         </div>
       );
     }

@@ -1,16 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
     constructor(props) {
       super(props);
-    //   this.state = this.props.user;
-  
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
     handleSubmit(e) {
       e.preventDefault();
-      this.props.action(this.state);
+      this.props.action(this.state).then(this.props.history.push("/"));
     }
   
     update(field) {
@@ -47,6 +46,10 @@ class LoginForm extends React.Component {
                 />
                 <button type='submit' className="loginbutton">LOG IN</button>
             </form>
+            <div id="signup123">
+              <h3 className="signup123head">Don't have an account?</h3>
+              <Link to="/signup" className="signup123">SIGN UP FOR CHARMTUNES</Link>
+            </div>
         </div>
       );
     }
