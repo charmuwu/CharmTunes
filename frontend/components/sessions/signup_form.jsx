@@ -3,7 +3,11 @@ import React from 'react';
 class SignUpForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = this.props.user;
+      this.state = {
+          username: '',
+          email: '',
+          password: '',
+      };
   
       this.handleSubmit = this.handleSubmit.bind(this);
     }

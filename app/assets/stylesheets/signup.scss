@@ -24,13 +24,15 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
 .input {
     padding: 10px;
     padding-block: 15px;
     border: 1px solid gray;
     border-radius: 3px;
     margin-bottom: 10px;
+}
+.input:focus{
+    outline: none;
 }
 #formheader {
     text-align: center;
@@ -39,11 +41,11 @@ body{
 #formtitle {
     font-size: 18px;
     font-weight: 700px;
+    line-height: 26px;
+    letter-spacing: 0px;
     text-align: center;
 }
-
-.signupbutton {
-    
+.signupbutton { 
     background-color: rgb(29, 185, 84);
     color: white;
     font-size: 17px;
@@ -54,8 +56,10 @@ body{
     border-radius: 30px;
     cursor: pointer;
 }
+.signupbutton:focus{
+    outline: none;
+}
 .signupbutton:hover{
-    
     background-color: rgb(30, 215, 96);
     color: white;
     font-size: 18px;
