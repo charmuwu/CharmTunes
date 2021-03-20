@@ -37,7 +37,6 @@ class SignUpForm extends React.Component {
     update(field) {
       return e => this.setState({ [field]: e.currentTarget.value });
     }
-  
     render() {
       return (
         <div>
@@ -48,8 +47,12 @@ class SignUpForm extends React.Component {
               <button className="demobtn" onClick={this.handleDemoUser} >CONTINUE WITH DEMO USER</button>
             </div>
             <br/>
-            <div className="divdivider">
-              <p className="or">or</p>
+            <div className="divdividerdaddy">
+              <div className="divdivider">
+                <div id="before"/>
+                  <p>or</p>
+                <div id="after"/>
+              </div>
             </div>
             <h3 id="formtitle">Sign up with your email address</h3>
             <form onSubmit={this.handleSubmit} className="signupform">

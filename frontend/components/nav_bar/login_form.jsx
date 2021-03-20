@@ -43,10 +43,12 @@ class LoginForm extends React.Component {
             <div id="demobtn">
               <button className="demobtn" onClick={this.handleDemoUser} >CONTINUE WITH DEMO USER</button>
             </div>
-            <div className="divdivider">
-              <div id="before"/>
-                <p>or</p>
-              <div id="after"/>
+            <div className="divdividerdaddy">
+              <div className="divdivider">
+                <div id="before"/>
+                  <p>or</p>
+                <div id="after"/>
+              </div>
             </div>
             <br/>
             <form onSubmit={this.handleSubmit} className="loginform">

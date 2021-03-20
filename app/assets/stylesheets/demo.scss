@@ -4,9 +4,24 @@
     flex-direction: column;
     max-width: 450px;
 }
+.divdividerdaddy{
+    display: flex;
+    justify-content: center;
+}
 .divdivider{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    p{
+        padding-left: 20px;
+        padding-right: 20px;
+        color: rgb(117, 117, 117);
+    }
+    div{
+        margin-top: 28px;
+        width: 200px;
+        height: 1px;
+        background-color: rgb(117, 117, 117);
+    }
 }
 .demobtn{
    

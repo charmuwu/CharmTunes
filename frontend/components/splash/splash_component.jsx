@@ -22,9 +22,6 @@ class SplashComponent extends React.Component{
             this.props.currentUser ? ifLoggedIn() : ifLoggedOut()
             
         )
-                
-            
-        
     }
 
 }
