@@ -15,9 +15,12 @@ export const resetErrors = () => ({
 })
 
 export const login = formUser => dispatch => postSession(formUser)
- .then( user => dispatch({
-    type: RECEIVE_CURRENT_USER,
-    user}), error => dispatch(receiveErrors(error.responseJSON)));
+    .then( user => dispatch({
+            type: RECEIVE_CURRENT_USER,
+            user
+        }), 
+        error => dispatch(receiveErrors(error.responseJSON))
+    );
 
 export const logout = () => dispatch => deleteSession()
  .then(() => dispatch({

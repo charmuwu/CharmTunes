@@ -1,0 +1,39 @@
+#demobtn{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 450px;
+}
+.divdivider{
+    display: flex;
+    flex-direction: column;
+}
+.demobtn{
+   
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #3b5998;
+    background-color: #3b5998;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px;
+    transition-duration: .3s;
+    vertical-align: middle;
+    cursor: pointer;
+    
+}
+.demobtn:focus{
+    outline: none;
+}
+.demobtn:hover{
+    transition-duration: .3s;
+    border: 1px solid #3a61b3;
+    background-color: #3a61b3;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    
+}

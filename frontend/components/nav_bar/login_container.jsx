@@ -4,11 +4,12 @@ import { login } from '../../actions/session_actions';
 
 const mSTP = state => ({
     user: state.users,
-    errors: state.errors
+    errors: state.errors.session
 })
 
 const mDTP = dispatch => ({
-  action: user => dispatch(login(user))
+  action: user => dispatch(login(user)),
+  resetErrors: () => dispatch(resetErrors())
 });
 
 export default connect(mSTP, mDTP)(LoginForm);

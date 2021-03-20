@@ -8,7 +8,7 @@ class SignUpForm extends React.Component {
           email: '',
           password: '',
       };
-  
+      this.handleDemoUser = this.handleDemoUser.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount(){
@@ -22,6 +22,11 @@ class SignUpForm extends React.Component {
           ))}
         </div>  
       )
+    }
+    handleDemoUser(e) {
+      e.preventDefault();
+      this.props.login({username: 'demo', password:'123456'})
+      .then(() => this.props.history.push("/"));
     }
     handleSubmit(e) {
       e.preventDefault();
@@ -39,6 +44,13 @@ class SignUpForm extends React.Component {
             <div className="icon"></div>
             <h1 id="formheader">Sign up for free to start listening.</h1>
             <br/>
+            <div id="demobtn">
+              <button className="demobtn" onClick={this.handleDemoUser} >CONTINUE WITH DEMO USER</button>
+            </div>
+            <br/>
+            <div className="divdivider">
+              <p className="or">or</p>
+            </div>
             <h3 id="formtitle">Sign up with your email address</h3>
             <form onSubmit={this.handleSubmit} className="signupform">
                 {this.renderErrors()}
@@ -77,8 +89,11 @@ class SignUpForm extends React.Component {
                 />
                 <p className="terms" id="terms">By clicking on Sign up, you agree to CharmTunes's <a href="https://www.youtube.com/watch?v=Q5BNLaZWdck">Terms and Conditions of Use.</a></p>
                 <p className="terms">To learn more about how CharmTunes collects, uses, shares and protects your personal data please read CharmTunes's <a href="https://www.youtube.com/watch?v=fUIe4dSO2zg">Privacy Policy.</a></p>
-                <button type='submit' className="signupbutton">SIGN UP</button>
+                <div className="signupbtn">
+                  <button type='submit' className="signupbutton">SIGN UP</button>
+                </div>
             </form>
+            <br/>
             <div id="login123">
               <h3 className="login123" className="terms">Have an account? &nbsp;
                 <Link to="/login" className="login123" className="terms">Log In</Link>

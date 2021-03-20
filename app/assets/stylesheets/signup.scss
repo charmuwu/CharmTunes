@@ -46,7 +46,12 @@ body{
     letter-spacing: 0px;
     text-align: center;
 }
+.signupbtn{
+    position: relative;
+}
 .signupbutton { 
+    position: absolute;
+    width: 450px;
     background-color: rgb(29, 185, 84);
     color: white;
     font-size: 17px;
@@ -90,6 +95,7 @@ a.terms {
     display: flex;
     flex-direction: column;
     padding-top: 15px;
+    margin-top: 40px;
     .terms {
         font-size: 14px;
     }
