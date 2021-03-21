@@ -1,5 +1,5 @@
 .test{
-    background-color: #121212;
+    // background-color: #121212;
     width: 100%;
     height: 100%;
 }
@@ -30,6 +30,74 @@
     margin-right: 20px;
 }
 .splashlogout{
+    background-color: #b3b3b3
+}
+.stevendaddy {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.profilebtn{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.profilebtn:hover{
+    background-color: gray;
     
 }
-// #b3b3b3
+.profilebtn:focus{
+    outline: none;
+}
+.profilebtn + .dropdownmenu{
+    display: none;
+    list-style-type: none;
+}
+.profilebtn:focus + .dropdownmenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 40px;
+    background-color: #282828;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 16px 24px rgb(0, 0, 0), 
+        0 6px 8px rgb(0, 0, 0);
+    padding-left: 5px;
+    width: 100px;
+
+}
+li .splashlogout:hover{
+    background-color: gray;
+}
+li .profile{
+    color: gray;
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 45px;
+    text-align: left;
+    padding-block: 5px;
+}
+li .profile:hover{
+    color: white;
+    background-color: gray;
+}
+.splashlogout{
+    background-color: #282828;
+    border: 1px solid #282828;
+    color: gray;
+    font-size: 14px;
+    padding-left: 5px;
+    cursor: pointer;
+    width: 90px;
+    text-align: left;
+    padding-block: 5px;
+}
+.splashlogout:hover{
+    color: white;
+}

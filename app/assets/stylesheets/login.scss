@@ -9,6 +9,28 @@ body{
     font-size: 14px;
     font-weight: 700;
 }
+.loginbutton{
+    height: 40px;
+    border-radius: 30px;
+    background-color: #15883e;
+    border: 1px solid #15883e;
+    color: white;
+    font-weight: 700;
+    padding: 12px;
+    margin-top: 20px;
+    transition-duration: .3s;
+    letter-spacing: 2px;
+    min-width: 160px;
+    cursor: pointer; 
+}
+.loginbutton:hover{
+    background-color: #1db954;
+    border: 1px solid #1db954;
+    transition-duration: .3s;
+}
+.loginbutton:focus{
+    outline: none;
+}
 #formheaderlogin {
     text-align: center;
     letter-spacing: -0.04em;
@@ -21,18 +43,30 @@ body{
     flex-direction: column;
     width: 400px;
 }
+.divdivider2{
+    display: flex;
+    flex-direction: row;
+}
+.logindiv{
+    margin-top: 28px;
+    width: 420px;
+    height: 1px;
+    background-color: #d9dadc;
+}
 .signup123head{
     text-align: center;
+    font-size: 18px;
 }
 .signup123{
     text-align: center;
     text-decoration: none;
     border:2px solid gray;
-    font-style: none;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1;
     border-radius: 500px;
     color:gray;
+    padding: 15px;
     letter-spacing: 2px;
     transition-duration: .3s;
     cursor: pointer;
@@ -41,4 +75,8 @@ body{
     transition-duration: .3s;
     background-color: gray;
     color: white;
+}
+.signup123:focus{
+    border:2px solid black;
+    background: #8c8c8c;
 }

@@ -8,7 +8,12 @@ class MusicComponent extends React.Component {
     }
     render() {
         return(
-            <p>aaaaaaaa</p>
+            <div>
+                <audio controls className="">
+                    <source src="test.mp3" type="audio/mpeg"/>
+                </audio>
+                <p>aaaaaaaa</p>
+            </div>
         )
     }
 }

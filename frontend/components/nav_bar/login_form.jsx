@@ -46,11 +46,10 @@ class LoginForm extends React.Component {
             <div className="divdividerdaddy">
               <div className="divdivider">
                 <div id="before"/>
-                  <p>or</p>
+                  <p>OR</p>
                 <div id="after"/>
               </div>
             </div>
-            <br/>
             <form onSubmit={this.handleSubmit} className="loginform">
               {this.renderErrors()}
                 <label id="formlabel" htmlFor="username">
@@ -77,6 +76,11 @@ class LoginForm extends React.Component {
                 />
                 <button type='submit' className="loginbutton">LOG IN</button>
             </form>
+            <div className="divdividerdaddy">
+              <div className="divdivider2">
+                <div className="logindiv"></div>
+              </div>
+            </div>
             <div id="signup123">
               <h3 className="signup123head">Don't have an account?</h3>
               <Link to="/signup" className="signup123">SIGN UP FOR CHARMTUNES</Link>

@@ -14,7 +14,19 @@ class SplashComponent extends React.Component{
         )
         const ifLoggedIn = () => (
             <div>
-                <input className="splashlogout" type="submit" onClick={this.props.logout} value="Log Out"/>
+                <div className="stevendaddy">
+                    <button className="profilebtn">
+                        {currentUser.username}
+                    </button>
+                    <ul className="dropdownmenu">
+                        <li>
+                            <Link className="profile" to={`/users/${this.props.currentUser.id}`} >Profile</Link>
+                        </li>
+                        <li>
+                            <input className="splashlogout" type="submit" onClick={this.props.logout} value="Log Out"/>
+                        </li>
+                    </ul>
+                </div>
             </div>
         )
         return (

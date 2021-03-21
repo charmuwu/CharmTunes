@@ -14,13 +14,16 @@
     p{
         padding-left: 20px;
         padding-right: 20px;
-        color: rgb(117, 117, 117);
+        color: black;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
     }
     div{
-        margin-top: 28px;
+        margin-top: 24px;
         width: 200px;
         height: 1px;
-        background-color: rgb(117, 117, 117);
+        background-color: #d9dadc;
     }
 }
 .demobtn{
