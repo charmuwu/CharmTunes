@@ -26,7 +26,7 @@ class SplashComponent extends React.Component{
         const ifLoggedIn = () => (
             <div className="splashbuttons">
                 <button className="profilebtn" onClick={btnclickdrop}>
-                    {currentUser.username}
+                    {this.props.currentUser.username}
                 </button>
                 <div className="dropdownmenu" id="drpdwnmenu">
                     <Link className="profile" to={`/users/${this.props.currentUser.id}`} >Profile</Link>
@@ -38,7 +38,6 @@ class SplashComponent extends React.Component{
             <div>
                 {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
             </div>
-            
         )
     }
 

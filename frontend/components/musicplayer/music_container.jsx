@@ -3,6 +3,7 @@ import MusicComponent from './music_component';
 import {getSong, getSongs} from '../../actions/music_actions';
 
 const mSTP = state => ({
+    currentUser: state.entities.users[state.session.currentUser],
     songs: state.songs
 })
 const mDTP = dispatch => ({
