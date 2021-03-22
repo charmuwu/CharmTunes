@@ -1,6 +1,22 @@
 body{
     background-color: white;
 }
+.errordiv{
+    display: flex;
+    justify-content: center;
+}
+.errormsglogin {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    background-color: #e22134;
+    font-weight: 400;
+    padding: 10px 14px 16px;
+    border-width: 0;
+    margin-bottom: 24px;
+    height: 18px;
+    width: 420px;
+}
 .loginform {
     display: flex;
     max-width: 450px;

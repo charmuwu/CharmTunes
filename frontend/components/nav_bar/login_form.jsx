@@ -24,9 +24,9 @@ class LoginForm extends React.Component {
     }
     renderErrors() {
       return(
-        <div>
+        <div className="errordiv">
           {this.props.errors.map((error, id) => (
-            <p key={id}>{error}</p>
+            <p className="errormsglogin" key={id}>{error}</p>
           ))}
         </div>  
       )
@@ -40,6 +40,7 @@ class LoginForm extends React.Component {
         <div>
             <div className="icon"></div>
             <h1 id="formheaderlogin">To continue, log in to CharmTunes.</h1>
+            {this.renderErrors()}
             <div id="demobtn">
               <button className="demobtn" onClick={this.handleDemoUser} >CONTINUE WITH DEMO USER</button>
             </div>
@@ -51,7 +52,6 @@ class LoginForm extends React.Component {
               </div>
             </div>
             <form onSubmit={this.handleSubmit} className="loginform">
-              {this.renderErrors()}
                 <label id="formlabel" htmlFor="username">
                     Username
                 </label>

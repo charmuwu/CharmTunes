@@ -6,6 +6,17 @@ class SplashComponent extends React.Component{
         super(props)
     }
     render(){
+        function btnclickdrop(){ 
+            const dropdwn = document.getElementById("drpdwnmenu");
+            dropdwn.classList.toggle("show");
+            window.onclick = function(e) {
+                if (!e.target.matches('.profilebtn')) {  
+                    if (dropdwn.classList.contains('show')) {
+                        dropdwn.classList.remove('show');
+                    }
+                }
+            }
+        }
         const ifLoggedOut = () => (
             <div className="splashbuttons">
                 <Link className="splashsignup" to="/signup">SIGN UP</Link>
@@ -13,25 +24,20 @@ class SplashComponent extends React.Component{
             </div>
         )
         const ifLoggedIn = () => (
-            <div>
-                <div className="stevendaddy">
-                    <button className="profilebtn">
-                        {currentUser.username}
-                    </button>
-                    <ul className="dropdownmenu">
-                        <li>
-                            <Link className="profile" to={`/users/${this.props.currentUser.id}`} >Profile</Link>
-                        </li>
-                        <li>
-                            <input className="splashlogout" type="submit" onClick={this.props.logout} value="Log Out"/>
-                        </li>
-                    </ul>
+            <div className="splashbuttons">
+                <button className="profilebtn" onClick={btnclickdrop}>
+                    {currentUser.username}
+                </button>
+                <div className="dropdownmenu" id="drpdwnmenu">
+                    <Link className="profile" to={`/users/${this.props.currentUser.id}`} >Profile</Link>
+                    <input className="splashlogout" type="submit" onClick={this.props.logout} value="Log Out"/>
                 </div>
             </div>
         )
         return (
-            
-            this.props.currentUser ? ifLoggedIn() : ifLoggedOut()
+            <div>
+                {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
+            </div>
             
         )
     }
