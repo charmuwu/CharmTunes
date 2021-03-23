@@ -8,7 +8,10 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript">
-      window.mp3url= "<%= image_url('test.mp3') %>"
+      window.mp3url= "<%= image_url('test.mp3')%>"
+    </script>
+    <script type="text/javascript">
+      window.albumart = "<%= image_url('albumart.jpg')%>"
     </script>
     <% if current_user %>
       <script>

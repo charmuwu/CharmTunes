@@ -10,6 +10,7 @@ class MusicComponent extends React.Component {
         this.state = {
             playing: false,
             volume: 0.5,
+            currentTime: 0.0,
             duration: 0.0,
         }
         this.handleLoop = this.handleLoop.bind(this);
@@ -34,7 +35,8 @@ class MusicComponent extends React.Component {
         const currvol = this.audioRef.current.volume;
         if(this.audioRef.current.muted){
             this.audioRef.current.muted = false; //unmutes
-            this.volRef.current.value = currvol;// this.setState({}) //brings back to
+            // this.setState({}) //brings back to
+            this.volRef.current.value = currvol * 100.0;
         } else {
             this.audioRef.current.muted = true; //mutes
             this.volRef.current.value = 0;
@@ -64,6 +66,7 @@ class MusicComponent extends React.Component {
         /Math.floor(this.audioRef.current.seekable.duration)
     }
     handleScrub(e){
+        debugger
         const time = e.currentTarget.value;
         this.audioRef.current.currentTime = time;
         //{this.audioRef.current.duration}
@@ -82,6 +85,9 @@ class MusicComponent extends React.Component {
             <div className="musicplayerdiv">
                 
                 <div className="songinfo">
+                    <div>
+                        <img className="albumartinfo" src={window.albumart}></img>
+                    </div>
                     <div>
                         {this.props.songs.title}
                     </div>
@@ -106,7 +112,6 @@ class MusicComponent extends React.Component {
                         </div>
                         <input 
                             type="range"
-                            step="1"
                             className="scrubber"
                             min="0"
                             max="100"
@@ -124,8 +129,6 @@ class MusicComponent extends React.Component {
                         onClick={this.handleMute}
                         ref={this.muteRef}>
                     mute</button>
-                </div>
-                <div>
                     <input 
                         type="range" 
                         className="volume"

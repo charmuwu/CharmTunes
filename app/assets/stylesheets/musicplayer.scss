@@ -6,6 +6,15 @@
     // justify-content: space-between;
     
 }
+.songinfo{
+    display: flex;
+    flex-direction: row;
+}
+.albumartinfo{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 56px;
+}
 .musicplayerdiv{
     bottom: 0;
     position: fixed;
@@ -16,6 +25,7 @@
     background-color: gray;
     margin-left: -8px;
     height: 70px;
+    justify-content: space-between;
 }
 .loop{
     color: #b3b3b3;
