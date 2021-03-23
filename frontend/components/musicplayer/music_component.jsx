@@ -18,9 +18,11 @@ class MusicComponent extends React.Component {
         this.handleMute = this.handleMute.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
         this.handleScrub = this.handleScrub.bind(this);
+        
     }
     componentDidMount(){
         this.props.getSongs();
+        debugger
     }
     handlePlay(){
         if(this.state.playing){
