@@ -20,7 +20,6 @@ class MusicComponent extends React.Component {
     }
     componentDidMount(){
         this.props.getSongs();
-        this.setState({duation: this.audioRef.current.duration})
     }
     handlePlay(){
         if(this.state.playing){
@@ -81,6 +80,7 @@ class MusicComponent extends React.Component {
         )
         const ifLoggedIn = () => (
             <div className="musicplayerdiv">
+                
                 <div className="songinfo">
                     <div>
                         {this.props.songs.title}
@@ -102,11 +102,7 @@ class MusicComponent extends React.Component {
                     </div>
                     <div className="divaudiobar">
                         <div>
-                            {setInterval(() => {
-                                {this.audioRef.current.currentTime}
-                                //this.interval keep 1 interval key 
-                                //jordon is a rage quitter
-                            }, 1000)}
+                            currentTime
                         </div>
                         <input 
                             type="range"
