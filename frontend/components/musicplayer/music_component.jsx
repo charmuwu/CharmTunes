@@ -9,7 +9,7 @@ class MusicComponent extends React.Component {
             playing: false,
             volume: 0.5,
         }
-        // this.handleVolume = this.handleVolume.bind(this);
+        this.handleVolume = this.handleVolume.bind(this);
         this.handleMute = this.handleMute.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
     }
@@ -33,8 +33,10 @@ class MusicComponent extends React.Component {
             this.audioRef.current.muted = true; //mutes
         }
     }
-    handleVolume(){
-        return e => this.setState({ volume: e.currentTarget.value });
+    handleVolume(e){
+        const vol = e.currentTarget.value / 100.0;
+        this.audioRef.current.volume = vol;
+        return e => this.setState({ volume: vol });
     }
     render() {
         const ifLoggedOut = () => (
@@ -58,9 +60,9 @@ class MusicComponent extends React.Component {
                     <input 
                         type="range" 
                         className="volume"
-                        min="1"
+                        min="0"
                         max="100" 
-                        value="100"
+                        // value={this.state.volume * 100}
                         onChange={this.handleVolume}> 
                     </input>
                 </div>
