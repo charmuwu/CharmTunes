@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from './components/root'
 import { postUser , postSession, deleteSession } from './utils/session_api_util'
-import {signup} from './actions/session_actions'
+import { signup } from './actions/session_actions';
+import { getSongs } from './actions/music_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let preloadedState = undefined;
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.signup = signup;
+    window.getSongs = getSongs;
 
     ReactDOM.render(<Root store={store} />, root);
 });
