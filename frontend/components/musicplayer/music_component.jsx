@@ -32,8 +32,7 @@ class MusicComponent extends React.Component {
         }
     }
     handleMute(){
-        debugger
-        const currvol = this.volRef.current.value;
+        const currvol = this.audioRef.current.volume;
         if(this.audioRef.current.muted){
             this.audioRef.current.muted = false; //unmutes
             this.volRef.current.value = currvol;// this.setState({}) //brings back to
@@ -45,6 +44,9 @@ class MusicComponent extends React.Component {
     handleVolume(e){
         const vol = e.currentTarget.value / 100.0;
         this.audioRef.current.volume = vol;
+        if(this.audioRef.current.muted){
+            this.audioRef.current.muted = false;
+        }
         return e => this.setState({ volume: vol });
     }
     handleLoop(){
@@ -63,7 +65,6 @@ class MusicComponent extends React.Component {
         /Math.floor(this.audioRef.current.seekable.duration)
     }
     handleScrub(e){
-        debugger
         const time = e.currentTarget.value;
         this.audioRef.current.currentTime = time;
         //{this.audioRef.current.duration}
