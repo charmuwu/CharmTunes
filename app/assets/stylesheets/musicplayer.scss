@@ -1,9 +1,37 @@
+.loggedoutmusicbanner{
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    
+}
 .musicplayerdiv{
     bottom: 0;
     position: fixed;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color: gray;
+    margin-left: -8px;
+    height: 70px;
 }
-.musicplayer{
-    
+.loop{
+    color: #b3b3b3;
+    border: none;
+}
+.loop:focus{
+    outline: none;
+}
+.looped{
+    color: rgb(71, 246, 71);
+}
+.divcontrolsbaby{
+    display:flex;
+    flex-direction: row;
+}
+.divaudiobar{
+    display:flex;
+    flex-direction: row;
 }

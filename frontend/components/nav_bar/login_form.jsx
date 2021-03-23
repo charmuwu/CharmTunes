@@ -80,7 +80,7 @@ class LoginForm extends React.Component {
             </form>
             <div className="divdividerdaddy">
               <div className="divdivider2">
-                <div className="logindiv"></div>
+                <div className="tati"></div>
               </div>
             </div>
             <div id="signup123">
