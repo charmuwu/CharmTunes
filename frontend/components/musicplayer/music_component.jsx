@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {GrPlayFill} from 'react-icons/gr'
-import {GiPauseButton} from 'react-icons/gi'
-import {ImLoop} from 'react-icons/im'
+import {IoPlaySharp} from 'react-icons/io5';
+import {GiPauseButton} from 'react-icons/gi';
+import {ImLoop} from 'react-icons/im';
+import {MdSkipPrevious, MdSkipNext} from 'react-icons/md';
+import SongsComponent from '../songs/songs_component';
 
 class MusicComponent extends React.Component {
     constructor(props){
@@ -16,16 +18,14 @@ class MusicComponent extends React.Component {
             currentTime: 0.0,
             duration: 0.0,
         }
+
+        this.handleCurrentTime = this.handleCurrentTime.bind(this);
         this.handleDuration = this.handleDuration.bind(this);
         this.handleLoop = this.handleLoop.bind(this);
         this.handleVolume = this.handleVolume.bind(this);
         this.handleMute = this.handleMute.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
         this.handleScrub = this.handleScrub.bind(this);
-        
-    }
-    componentDidMount(){
-        this.props.getSongs();
     }
     handlePlay(){
         if(this.state.playing){
@@ -40,7 +40,6 @@ class MusicComponent extends React.Component {
         const currvol = this.audioRef.current.volume;
         if(this.audioRef.current.muted){
             this.audioRef.current.muted = false; //unmutes
-            // this.setState({}) //brings back to
             this.volRef.current.value = currvol * 100.0;
         } else {
             this.audioRef.current.muted = true; //mutes
@@ -65,8 +64,19 @@ class MusicComponent extends React.Component {
             this.audioRef.current.loop = true;
         }
     }
+
     handleCurrentTime(){
+        this.handleDuration();
         //setinterval at 500ms
+        this.intervalID = setInterval(this.setCurrentTime(), 500)
+        // refer to line 130
+        if(this.state.playing){
+ 
+        } else {
+            // clearInterval(this.intervalId)
+        }
+    }
+    setCurrentTime(){
         this.setState({currentTime: this.audioRef.currentTime})
     }
     handleDuration(){
@@ -74,6 +84,7 @@ class MusicComponent extends React.Component {
             this.setState({duration: this.audioRef.current.duration})
         }
     }
+
     handleScrub(e){
         const percent = e.currentTarget.value;
         const time = (this.state.duration * percent ) / 100
@@ -81,6 +92,7 @@ class MusicComponent extends React.Component {
         //{this.audioRef.current.duration}
     }
     render() {
+        // console.log(this.props.currentSong);
         const ifLoggedOut = () => (
             <div className="loggedoutmusicbanner" id="bottomsignupsplash">
                 <div className="righttext">
@@ -90,37 +102,50 @@ class MusicComponent extends React.Component {
                 <Link className="splashsignupbottom" to="/signup">SIGN UP FREE</Link>
             </div>
         )
+
+        let currentSongTitle = "";
+        let currentSongArtist = "";
+        if(this.props.currentSong){
+            currentSongTitle = this.props.currentSong.title;
+            currentSongArtist = this.props.currentSong.artist;
+        }
+
         const ifLoggedIn = () => (
             <div className="musicplayerdiv">
-                
                 <div className="songinfo">
                     <div>
                         <img className="albumartinfo" src={window.albumart}></img>
                     </div>
-                    <div>
-                        {/* {this.props.songs.title} */}
+                    <div className="songTA">
+                        <p className="songTitle">{currentSongTitle}</p>
+                        <p className="songArtist">{currentSongArtist}</p>
                     </div>
                 </div>
                 <div className="divcontrols">
                     <div className="divcontrolsbaby">
-                        <div>
-                            <button className="play" onClick={this.handlePlay}>
-                                {this.state.playing ? <GiPauseButton /> : <GrPlayFill /> }
-                            </button>
-                        </div>
-                        <div>
-                            <button 
-                                className="loop" 
-                                onClick={this.handleLoop}
-                                id="loop">
-                            <ImLoop />
-                            </button>
-                        </div>
+                        <button className='musicbuttons'>
+                            <MdSkipPrevious />
+                        </button>
+                        <button 
+                            className='musicbuttons'
+                            onClick={this.handlePlay}>
+                            {this.state.playing ? <GiPauseButton className="playbtn"/> : <IoPlaySharp className="playbtn"/> }
+                        </button>
+                        <button className='musicbuttons'>
+                            <MdSkipNext />
+                        </button>
+                        <button 
+                            className='musicbuttons' 
+                            onClick={this.handleLoop}
+                            id="loop">
+                        <ImLoop />
+                        </button>
+                        
                     </div>
                     <div className="divaudiobar">
                         <div>
                             {/* display the current time in minutes:seconds here*/}
-                            {this.state.currentTime}
+                            {this.state.currentTime / 60} : {this.state.currentTime % 60}
                         </div>
                         <input 
                             type="range"
@@ -151,10 +176,10 @@ class MusicComponent extends React.Component {
                         ref={this.volRef}> 
                     </input>
                 </div>
-                <audio 
+                <audio
                     className="musicplayer" 
                     ref={this.audioRef}
-                    onLoadedData={this.handleDuration}>
+                    onLoadedData={this.handleCurrentTime}>
                     <source src={window.mp3url} type="audio/mpeg"/>
                 </audio>
                 <p></p>
@@ -162,8 +187,9 @@ class MusicComponent extends React.Component {
         )
         return(
             <div>
-                {/* <p>{this.props.songs.title}</p> */}
+                <div>
                 {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
+                </div>
             </div>
         )
     }

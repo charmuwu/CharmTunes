@@ -5,7 +5,7 @@ import {getSong, getSongs} from '../../actions/music_actions';
 const mSTP = state => {
     return{
     currentUser: state.entities.users[state.session.currentUser],
-    songs: state.session.currentSong
+    currentSong: state.session.currentSong
     }
 }
 const mDTP = dispatch => ({
