@@ -103,10 +103,15 @@ class MusicComponent extends React.Component {
         let currentSongTitle = "";
         let currentSongArtist = "";
         let currentSongId;
+        let currentSongURL ="";
+        let currentSongImg = "";
         if(this.props.currentSong){
             currentSongId = this.props.currentSong.id;
             currentSongTitle = this.props.currentSong.title;
             currentSongArtist = this.props.currentSong.artist;
+            
+            this.props.currentSong.id === 1 ? currentSongURL=window.mp3url : currentSongURL=window.garden;
+            this.props.currentSong.id === 1 ? currentSongImg=window.albumart : currentSongImg=window.albumart2;
         }
         let volumevalue;
         if(this.volRef){
@@ -117,7 +122,7 @@ class MusicComponent extends React.Component {
             <div className="musicplayerdiv">
                 <div className="songinfo">
                     <div>
-                        <img className="albumartinfo" src={window.albumart}></img>
+                        <img className="albumartinfo" src={currentSongImg}></img>
                     </div>
                     <div className="songTA">
                         <p className="songTitle">{currentSongTitle}</p>
@@ -189,7 +194,7 @@ class MusicComponent extends React.Component {
                     className="musicplayer" 
                     ref={this.audioRef}
                     onLoadedData={this.handleDuration}>
-                    <source src={window.mp3url} type="audio/mpeg"/>
+                    <source src={currentSongURL} type="audio/mpeg"/>
                 </audio>
                 <p></p>
             </div>

@@ -10,17 +10,21 @@ class SongsComponent extends React.Component{
         this.props.getSongs();
         // this.props.getSong(1);
     }
-    handleClick(){
-        this.props.getSong(1);
-    }
-    handleClick2(){
-        this.props.getSong(0);
+    handleClick(id){
+        this.props.getSong(id);
     }
     render(){
+        let songs;
+        if(this.props.songs){
+            songs = Object.values(this.props.songs)
+        }
         return(
             <div className="musicContainer">
-                <button onClick={this.handleClick}>song data 1</button>
-                <button onClick={this.handleClick2}>other song data not loaded lol</button>
+                {songs.map( songObj => (
+                    <div key={songObj.id}> {songObj.title}
+                        <button onClick={() => this.handleClick(songObj.id)}></button>
+                    </div>
+                ))}
             </div>
         )
     }

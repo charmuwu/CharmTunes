@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_SONG, RECEIVE_SONGS } from '../actions/music_actions';
+import { RECEIVE_SONGS } from '../actions/music_actions';
 
 const musicReducer = (state={}, action) => {
     Object.freeze(state);
