@@ -5,14 +5,14 @@ import LogInContainer from "./nav_bar/login_container";
 import SplashContainer from "./splash/splash_container";
 import MusicContainer from "./musicplayer/music_container";
 import {AuthRoute, ProtectedRoute} from '../utils/route_utils';
-import SongsComponent from "./songs/songs_component";
+import SongsContainer from "./songs/songs_container";
 
 const App = () => (
   <div>
     <div className="test">
       <Route exact path="/" component={SplashContainer} />
       <Route exact path="/" component={MusicContainer} />
-      <Route exact path="/" component={SongsComponent} />
+      <Route exact path="/" component={SongsContainer} />
     </div>
     <Switch>
       <ProtectedRoute path="/users" />

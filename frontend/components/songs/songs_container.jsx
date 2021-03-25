@@ -1,4 +1,6 @@
 import { connect } from 'react-redux';
+import SongsComponent from './songs_component';
+import {getSongs, getSong} from '../../actions/music_actions';
 
 const mSTP = state => ({
     songs: state.entities.songs

@@ -4,7 +4,7 @@ import {IoPlaySharp} from 'react-icons/io5';
 import {GiPauseButton} from 'react-icons/gi';
 import {ImLoop} from 'react-icons/im';
 import {MdSkipPrevious, MdSkipNext} from 'react-icons/md';
-import SongsComponent from '../songs/songs_component';
+import {FiVolume2, FiVolume1, FiVolume, FiVolumeX} from 'react-icons/fi'
 
 class MusicComponent extends React.Component {
     constructor(props){
@@ -17,9 +17,9 @@ class MusicComponent extends React.Component {
             volume: 0.5,
             currentTime: 0.0,
             duration: 0.0,
+            muted: false,
         }
 
-        this.handleCurrentTime = this.handleCurrentTime.bind(this);
         this.handleDuration = this.handleDuration.bind(this);
         this.handleLoop = this.handleLoop.bind(this);
         this.handleVolume = this.handleVolume.bind(this);
@@ -27,13 +27,20 @@ class MusicComponent extends React.Component {
         this.handlePlay = this.handlePlay.bind(this);
         this.handleScrub = this.handleScrub.bind(this);
     }
+    componentDidMount(){
+        this.props.getSongs();
+        // this.props.getSong(1);
+    }
     handlePlay(){
         if(this.state.playing){
             this.audioRef.current.pause();
             this.setState({playing: false});
+            clearInterval(this.intervalId)
         } else{
             this.audioRef.current.play();
             this.setState({playing: true});
+            this.intervalID = setInterval(()=>this.setCurrentTime(), 500);
+            
         }
     }
     handleMute(){
@@ -41,9 +48,11 @@ class MusicComponent extends React.Component {
         if(this.audioRef.current.muted){
             this.audioRef.current.muted = false; //unmutes
             this.volRef.current.value = currvol * 100.0;
+            this.setState({muted: false});
         } else {
             this.audioRef.current.muted = true; //mutes
             this.volRef.current.value = 0;
+            this.setState({muted: true});
         }
     }
     handleVolume(e){
@@ -52,7 +61,7 @@ class MusicComponent extends React.Component {
         if(this.audioRef.current.muted){
             this.audioRef.current.muted = false;
         }
-        return e => this.setState({ volume: vol });
+        this.setState({volume: vol });
     }
     handleLoop(){
         const loopbtn = document.getElementById('loop');
@@ -64,20 +73,8 @@ class MusicComponent extends React.Component {
             this.audioRef.current.loop = true;
         }
     }
-
-    handleCurrentTime(){
-        this.handleDuration();
-        //setinterval at 500ms
-        this.intervalID = setInterval(this.setCurrentTime(), 500)
-        // refer to line 130
-        if(this.state.playing){
- 
-        } else {
-            // clearInterval(this.intervalId)
-        }
-    }
     setCurrentTime(){
-        this.setState({currentTime: this.audioRef.currentTime})
+        this.setState({currentTime: this.audioRef.current.currentTime})
     }
     handleDuration(){
         if(this.props.currentUser){
@@ -105,9 +102,15 @@ class MusicComponent extends React.Component {
 
         let currentSongTitle = "";
         let currentSongArtist = "";
+        let currentSongId;
         if(this.props.currentSong){
+            currentSongId = this.props.currentSong.id;
             currentSongTitle = this.props.currentSong.title;
             currentSongArtist = this.props.currentSong.artist;
+        }
+        let volumevalue;
+        if(this.volRef){
+            volumevalue = this.state.volume;
         }
 
         const ifLoggedIn = () => (
@@ -127,9 +130,9 @@ class MusicComponent extends React.Component {
                             <MdSkipPrevious />
                         </button>
                         <button 
-                            className='musicbuttons'
+                            className='play'
                             onClick={this.handlePlay}>
-                            {this.state.playing ? <GiPauseButton className="playbtn"/> : <IoPlaySharp className="playbtn"/> }
+                            {this.state.playing ? <GiPauseButton className="musicbuttons"/> : <IoPlaySharp className="musicbuttons"/> }
                         </button>
                         <button className='musicbuttons'>
                             <MdSkipNext />
@@ -143,9 +146,11 @@ class MusicComponent extends React.Component {
                         
                     </div>
                     <div className="divaudiobar">
-                        <div>
+                        <div className="songtime">
                             {/* display the current time in minutes:seconds here*/}
-                            {this.state.currentTime / 60} : {this.state.currentTime % 60}
+                            {Math.floor(this.state.currentTime / 60)}:
+                            {Math.floor(this.state.currentTime) % 60 < 10 ? `0${Math.floor(this.state.currentTime) % 60}`
+                            : Math.floor(this.state.currentTime) % 60}
                         </div>
                         <input 
                             type="range"
@@ -155,31 +160,35 @@ class MusicComponent extends React.Component {
                             onChange={this.handleScrub}
                             >
                         </input>
-                        <div>
+                        <div className="songtime">
                             {Math.floor(this.state.duration / 60)}:{Math.floor(this.state.duration)%60}
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="volumeControlStuff">
                     <button 
                         className="mute" 
                         onClick={this.handleMute}
                         ref={this.muteRef}>
-                    mute</button>
+                    {this.state.volume === 0 || this.state.muted ? <FiVolumeX className="musicbuttons"/> 
+                        :this.state.volume < 0.20 ? <FiVolume className="musicbuttons"/> 
+                            :this.state.volume <0.66 ? <FiVolume1 className="musicbuttons"/> 
+                                :<FiVolume2 className="musicbuttons"/>}
+                    </button>
                     <input 
                         type="range" 
                         className="volume"
                         min="0"
                         max="100" 
-                        // value={this.state.volume * 100}
                         onChange={this.handleVolume}
                         ref={this.volRef}> 
                     </input>
                 </div>
                 <audio
+                    key={currentSongId}
                     className="musicplayer" 
                     ref={this.audioRef}
-                    onLoadedData={this.handleCurrentTime}>
+                    onLoadedData={this.handleDuration}>
                     <source src={window.mp3url} type="audio/mpeg"/>
                 </audio>
                 <p></p>
