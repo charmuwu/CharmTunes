@@ -31,7 +31,11 @@ class SongsComponent extends React.Component{
                             <p className="songcontainertitle">{songObj.title}</p>
                             <p className="songcontainerartist">{songObj.artist}</p>
                         </div>
-                        <button onClick={() => this.handleClick(songObj.id)}><IoPlaySharp /></button>
+                        <button 
+                            className="shantoplaybutton" 
+                            onClick={() => this.handleClick(songObj.id)}>
+                                <IoPlaySharp id="shantosbaby"/>
+                        </button>
                     </div>
                 ))}
             </div>

@@ -15,6 +15,7 @@ class MusicComponent extends React.Component {
         // let initialVol = this.volRef.current ? this.volRef.current.value : 0.5;
         this.state = {
             // volume: initialVol,
+            progress: 0.0,
             currentTime: 0.0,
             duration: 0.0,
             muted: false,
@@ -33,15 +34,16 @@ class MusicComponent extends React.Component {
     }
     handlePlay(){
         if(this.props.isPlaying){
-
             this.audioRef.current.pause();
             this.props.playPause();
             clearInterval(this.intervalId)
         } else{
             this.audioRef.current.play();
             this.props.playPause();
-            this.intervalID = setInterval(()=>this.setCurrentTime(), 500);
-            
+            this.intervalID = setInterval(()=>{
+                this.setCurrentTime();
+                this.setCurrentProgress();
+            }, 500); 
         }
     }
     handleMute(){
@@ -77,9 +79,16 @@ class MusicComponent extends React.Component {
     setCurrentTime(){
         this.setState({currentTime: this.audioRef.current.currentTime})
     }
+    setCurrentProgress(){
+        this.setState({progress: this.state.currentTime / this.state.duration * 100})
+    }
     handleOnLoaded(){
         if(this.props.isPlaying){
             this.audioRef.current.play();
+            this.intervalID = setInterval(()=>{
+                this.setCurrentTime();
+                this.setCurrentProgress();
+            }, 500);
         }
         if(this.props.currentUser){
             this.setState({duration: this.audioRef.current.duration})
@@ -91,6 +100,7 @@ class MusicComponent extends React.Component {
         const percent = e.currentTarget.value;
         const time = (this.state.duration * percent ) / 100
         this.audioRef.current.currentTime = time;
+        this.setState({progress: percent})
         //{this.audioRef.current.duration}
     }
     render() {
@@ -115,8 +125,8 @@ class MusicComponent extends React.Component {
             currentSongTitle = this.props.currentSong.title;
             currentSongArtist = this.props.currentSong.artist;
             
-            this.props.currentSong.id === 1 ? currentSongURL=window.mp3url : currentSongURL=window.garden;
-            this.props.currentSong.id === 1 ? currentSongImg=window.albumart : currentSongImg=window.albumart2;
+            this.props.currentSong.id === 1 ? currentSongURL=window.mp3url : this.props.currentSong.id === 2 ? currentSongURL=window.garden : currentSongURL = window.kondor;
+            this.props.currentSong.id === 1 ? currentSongImg=window.albumart : this.props.currentSong.id === 2 ?currentSongImg=window.albumart2 : currentSongImg=window.albumart3;
         }
 
         const ifLoggedIn = () => (
@@ -161,6 +171,7 @@ class MusicComponent extends React.Component {
                         <input 
                             type="range"
                             className="scrubber"
+                            value={this.state.progress}
                             min="0"
                             max="100"
                             onChange={this.handleScrub}
