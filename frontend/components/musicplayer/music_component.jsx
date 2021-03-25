@@ -12,9 +12,9 @@ class MusicComponent extends React.Component {
         this.audioRef = React.createRef();
         this.muteRef = React.createRef();
         this.volRef = React.createRef();
+        let initialVol = this.volRef.current ? this.volRef.current.value : 0.5;
         this.state = {
-            playing: false,
-            volume: 0.5,
+            volume: initialVol,
             currentTime: 0.0,
             duration: 0.0,
             muted: false,
@@ -32,13 +32,15 @@ class MusicComponent extends React.Component {
         // this.props.getSong(1);
     }
     handlePlay(){
-        if(this.state.playing){
+        if(this.props.isPlaying){
+            debugger
             this.audioRef.current.pause();
-            this.setState({playing: false});
+            this.props.playPause();
             clearInterval(this.intervalId)
         } else{
+            debugger
             this.audioRef.current.play();
-            this.setState({playing: true});
+            this.props.playPause();
             this.intervalID = setInterval(()=>this.setCurrentTime(), 500);
             
         }
@@ -77,6 +79,9 @@ class MusicComponent extends React.Component {
         this.setState({currentTime: this.audioRef.current.currentTime})
     }
     handleDuration(){
+        if(this.props.isPlaying){
+            this.audioRef.current.play();
+        }
         if(this.props.currentUser){
             this.setState({duration: this.audioRef.current.duration})
         }
@@ -133,7 +138,7 @@ class MusicComponent extends React.Component {
                         <button 
                             className='play'
                             onClick={this.handlePlay}>
-                            {this.state.playing ? <GiPauseButton className="musicbuttons"/> : <IoPlaySharp className="musicbuttons"/> }
+                            {this.props.isPlaying ? <GiPauseButton className="musicbuttons"/> : <IoPlaySharp className="musicbuttons"/> }
                         </button>
                         <button className='musicbuttons'>
                             <MdSkipNext />

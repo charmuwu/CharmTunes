@@ -1,7 +1,8 @@
-import { RECEIVE_CURRENT_SONG } from "../actions/music_actions";
+import { RECEIVE_CURRENT_SONG, IS_PLAYING } from "../actions/music_actions";
 import { LOGOUT_CURRENT_USER, RECEIVE_CURRENT_USER } from "../actions/session_actions";
 const _nullSession = {
-    currentUser: null
+    currentUser: null,
+    songPlaying: false,
 }
 const sessionReducer = (state=_nullSession, action) => {
     Object.freeze(state)
@@ -9,7 +10,11 @@ const sessionReducer = (state=_nullSession, action) => {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, state, {currentUser: action.user.id})
         case RECEIVE_CURRENT_SONG:
-            return Object.assign({}, state, {currentSong: action.song})
+            const nextState = {currentSong: action.song, isPlaying: true}
+            return Object.assign({}, state, nextState )
+        case IS_PLAYING:
+            debugger
+            return Object.assign({},state, {isPlaying: !state.isPlaying})
         case LOGOUT_CURRENT_USER:
             return _nullSession
         default:
