@@ -113,10 +113,6 @@ class MusicComponent extends React.Component {
             this.props.currentSong.id === 1 ? currentSongURL=window.mp3url : currentSongURL=window.garden;
             this.props.currentSong.id === 1 ? currentSongImg=window.albumart : currentSongImg=window.albumart2;
         }
-        let volumevalue;
-        if(this.volRef){
-            volumevalue = this.state.volume;
-        }
 
         const ifLoggedIn = () => (
             <div className="musicplayerdiv">
