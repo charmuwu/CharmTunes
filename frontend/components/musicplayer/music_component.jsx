@@ -12,15 +12,15 @@ class MusicComponent extends React.Component {
         this.audioRef = React.createRef();
         this.muteRef = React.createRef();
         this.volRef = React.createRef();
-        let initialVol = this.volRef.current ? this.volRef.current.value : 0.5;
+        // let initialVol = this.volRef.current ? this.volRef.current.value : 0.5;
         this.state = {
-            volume: initialVol,
+            // volume: initialVol,
             currentTime: 0.0,
             duration: 0.0,
             muted: false,
         }
 
-        this.handleDuration = this.handleDuration.bind(this);
+        this.handleOnLoaded = this.handleOnLoaded.bind(this);
         this.handleLoop = this.handleLoop.bind(this);
         this.handleVolume = this.handleVolume.bind(this);
         this.handleMute = this.handleMute.bind(this);
@@ -33,12 +33,11 @@ class MusicComponent extends React.Component {
     }
     handlePlay(){
         if(this.props.isPlaying){
-            debugger
+
             this.audioRef.current.pause();
             this.props.playPause();
             clearInterval(this.intervalId)
         } else{
-            debugger
             this.audioRef.current.play();
             this.props.playPause();
             this.intervalID = setInterval(()=>this.setCurrentTime(), 500);
@@ -63,7 +62,7 @@ class MusicComponent extends React.Component {
         if(this.audioRef.current.muted){
             this.audioRef.current.muted = false;
         }
-        this.setState({volume: vol });
+        this.props.currVol(vol);
     }
     handleLoop(){
         const loopbtn = document.getElementById('loop');
@@ -78,13 +77,14 @@ class MusicComponent extends React.Component {
     setCurrentTime(){
         this.setState({currentTime: this.audioRef.current.currentTime})
     }
-    handleDuration(){
+    handleOnLoaded(){
         if(this.props.isPlaying){
             this.audioRef.current.play();
         }
         if(this.props.currentUser){
             this.setState({duration: this.audioRef.current.duration})
         }
+        this.audioRef.current.volume = this.props.currentVolume;
     }
 
     handleScrub(e){
@@ -176,9 +176,9 @@ class MusicComponent extends React.Component {
                         className="mute" 
                         onClick={this.handleMute}
                         ref={this.muteRef}>
-                    {this.state.volume === 0 || this.state.muted ? <FiVolumeX className="musicbuttons"/> 
-                        :this.state.volume < 0.20 ? <FiVolume className="musicbuttons"/> 
-                            :this.state.volume <0.66 ? <FiVolume1 className="musicbuttons"/> 
+                    {this.props.currentVolume === 0 || this.state.muted ? <FiVolumeX className="musicbuttons"/> 
+                        :this.props.currentVolume < 0.20 ? <FiVolume className="musicbuttons"/> 
+                            :this.props.currentVolume <0.66 ? <FiVolume1 className="musicbuttons"/> 
                                 :<FiVolume2 className="musicbuttons"/>}
                     </button>
                     <input 
@@ -194,7 +194,7 @@ class MusicComponent extends React.Component {
                     key={currentSongId}
                     className="musicplayer" 
                     ref={this.audioRef}
-                    onLoadedData={this.handleDuration}>
+                    onLoadedData={this.handleOnLoaded}>
                     <source src={currentSongURL} type="audio/mpeg"/>
                 </audio>
                 <p></p>
@@ -203,7 +203,7 @@ class MusicComponent extends React.Component {
         return(
             <div>
                 <div>
-                {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
+                    {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
                 </div>
             </div>
         )

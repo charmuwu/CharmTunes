@@ -37569,3 +37569,666 @@ Processing by Api::SongsController#show as JSON
 Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2021-03-25 10:58:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1471ms (Views: 1468.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 10:58:43 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (1.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 10:58:43 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.7ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 10:58:46 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:07:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1487ms (Views: 1484.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:07:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:08:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1629ms (Views: 1627.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:10:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1550ms (Views: 1548.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:11:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1565ms (Views: 1563.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:11:31 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.7ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:11:31 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:11:35 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/songs/1" for ::1 at 2021-03-25 11:11:39 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:13:51 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:15:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1456ms (Views: 1454.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:15:32 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.4ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:15:32 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.0ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:15:35 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:15:42 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:16:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1477ms (Views: 1475.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:16:34 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:16:34 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.4ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:16:38 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs/1" for ::1 at 2021-03-25 11:16:42 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:16:45 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/songs/1" for ::1 at 2021-03-25 11:17:02 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:17:07 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:20:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1615ms (Views: 1613.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:20:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:20:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1494ms (Views: 1492.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:20:51 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.3ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:20:51 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.8ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:20:55 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.5ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/songs/1" for ::1 at 2021-03-25 11:20:57 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:21:28 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:22:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1731ms (Views: 1729.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:22:53 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.6ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:22:53 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.9ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:22:56 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:25:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1543ms (Views: 1541.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:25:11 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.6ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:25:11 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.4ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:25:20 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:28:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1502ms (Views: 1500.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:28:11 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (2.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (5.6ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:28:11 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.6ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:28:31 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:31:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1652ms (Views: 1650.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:31:55 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.1ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:31:55 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.5ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:32:04 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:32:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1493ms (Views: 1491.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:32:56 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.8ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:32:56 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.7ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:33:03 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-03-25 11:33:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wq98nxVggi94AsP_HugPtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1742ms (Views: 1740.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:33:41 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.4ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/songs" for ::1 at 2021-03-25 11:33:41 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs/2" for ::1 at 2021-03-25 11:33:44 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/songs/1" for ::1 at 2021-03-25 11:33:49 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
