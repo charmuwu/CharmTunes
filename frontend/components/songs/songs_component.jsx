@@ -23,19 +23,19 @@ class SongsComponent extends React.Component{
             <div className="musicContainer">
                 {songs.map( songObj => (
                     <div key={songObj.id} className="songcontainer"> 
-                        <div>
-                            {/* {songObj.artwork}  instead of the below*/}
-                            <img
-                                className="songcontainerart" 
-                                src={songObj.id === 1 ? window.albumart:window.albumart2}></img>
-                            <p className="songcontainertitle">{songObj.title}</p>
-                            <p className="songcontainerartist">{songObj.artist}</p>
-                        </div>
                         <button 
                             className="shantoplaybutton" 
                             onClick={() => this.handleClick(songObj.id)}>
                                 <IoPlaySharp id="shantosbaby"/>
                         </button>
+                        <div>
+                            {/* {songObj.artwork}  instead of the below*/}
+                            <img
+                                className="songcontainerart" 
+                                src={songObj.id === 1 ? window.albumart: songObj.id === 2 ? window.albumart2 : window.albumart3}></img>
+                            <p className="songcontainertitle">{songObj.title}</p>
+                            <p className="songcontainerartist">{songObj.artist}</p>
+                        </div>
                     </div>
                 ))}
             </div>

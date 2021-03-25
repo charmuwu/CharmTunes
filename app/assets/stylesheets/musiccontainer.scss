@@ -1,4 +1,7 @@
 .musicContainer{
+    display: grid;
+    grid-template-columns: 255px 255px 255px;
+    grid-template-rows: 400px 400px 400px;
     position: fixed;
     top: 50px;
     left: 0;
@@ -14,7 +17,7 @@
     padding: 20px;
     width: 180px;
     margin: 30px;
-
+    height: 310px;
 }
 .songcontainer:hover{
     background-color: #282828;
@@ -40,7 +43,7 @@
     position: fixed;
     transform: scale(1.00);
     margin-left: 145px;
-    margin-top: -100px;
+    margin-top: 180px;
     opacity: 0;
     transition-delay: 0.1s;
     #shantosbaby{
@@ -51,7 +54,7 @@
     transform: scale(1.1);
 }
 .songcontainer:hover .shantoplaybutton{
-    margin-top: -140px;
+    margin-top: 140px;
     opacity: 1;
     transition-delay: 0.1s;
 }
