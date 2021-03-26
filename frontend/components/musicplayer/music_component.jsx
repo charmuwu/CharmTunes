@@ -125,8 +125,8 @@ class MusicComponent extends React.Component {
             currentSongTitle = this.props.currentSong.title;
             currentSongArtist = this.props.currentSong.artist;
             
-            this.props.currentSong.id === 1 ? currentSongURL=window.mp3url : this.props.currentSong.id === 2 ? currentSongURL=window.garden : currentSongURL = window.kondor;
-            this.props.currentSong.id === 1 ? currentSongImg=window.albumart : this.props.currentSong.id === 2 ?currentSongImg=window.albumart2 : currentSongImg=window.albumart3;
+            this.props.currentSong.id === 1 ? currentSongURL=window.mp3url : this.props.currentSong.id === 2 ? currentSongURL=window.garden : this.props.currentSong.id === 3 ? currentSongURL = window.kondor : currentSongURL = window.melody;
+            this.props.currentSong.id === 1 ? currentSongImg=window.albumart : this.props.currentSong.id === 2 ? currentSongImg=window.albumart2 : this.props.currentSong.id === 3 ? currentSongImg=window.albumart3 : currentSongImg=window.albumart4;
         }
 
         const ifLoggedIn = () => (

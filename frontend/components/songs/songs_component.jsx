@@ -32,7 +32,7 @@ class SongsComponent extends React.Component{
                             {/* {songObj.artwork}  instead of the below*/}
                             <img
                                 className="songcontainerart" 
-                                src={songObj.id === 1 ? window.albumart: songObj.id === 2 ? window.albumart2 : window.albumart3}></img>
+                                src={songObj.id === 1 ? window.albumart: songObj.id === 2 ? window.albumart2 : songObj.id === 3 ? window.albumart3 : window.albumart4}></img>
                             <p className="songcontainertitle">{songObj.title}</p>
                             <p className="songcontainerartist">{songObj.artist}</p>
                         </div>
