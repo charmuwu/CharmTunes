@@ -38,7 +38,7 @@ class SplashComponent extends React.Component{
                     <button className="profilebtn" onClick={btnclickdrop}>
                         {this.props.currentUser.username}
                     </button>
-                    <div  id="triangle"></div>
+                    {/* <div  id="triangle"></div> */}
                 </div>
                 <div className="dropdownmenu" id="drpdwnmenu">
                     <Link className="profile" to={`/users/${this.props.currentUser.id}`} >Profile</Link>
