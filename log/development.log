@@ -41866,3 +41866,236 @@ Processing by Api::SongsController#index as JSON
 Completed 200 OK in 42ms (Views: 16.3ms | ActiveRecord: 5.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2021-09-28 16:58:12 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/charm/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (5.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 2484ms (Views: 2479.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-28 17:00:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1765ms (Views: 1762.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-28 17:00:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-09-28 17:00:04 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-09-28 17:00:04 -0400
+
+LoadError - Unable to autoload constant Api::SongsController, expected /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/app/controllers/api/songs_controller.rb to define it:
+
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (19.4ms)
+Completed 200 OK in 52ms (Views: 15.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/songs/1" for 127.0.0.1 at 2021-09-28 17:00:20 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.4ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2021-09-28 17:00:30 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["updated_at", "2021-09-28 21:00:30.446867"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.3ms)
+Completed 200 OK in 204ms (Views: 4.8ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-09-28 17:00:30 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-09-28 17:00:30 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Processing by Api::SongsController#index as JSON
+  [1m[36mSong Load (1.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendering api/songs/index.json.jbuilder
+  Rendered api/songs/index.json.jbuilder (6.6ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mSong Load (1.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/songs/1" for 127.0.0.1 at 2021-09-28 17:00:31 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Playlists (20210928210644)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "song_id" integer, "title" character varying, "creator" character varying, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210928210644_playlists.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Playlists (20210928210644)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "song_id" integer, "title" character varying, "creator" character varying, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210928210644_playlists.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Playlists (20210928210644)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "playlists" ("id" bigserial primary key, "song_id" integer, "title" character varying, "creator" character varying, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210928210644_playlists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210928210644"]]
+  ↳ bin/rails:9
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2021-09-29 01:47:49 -0400
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/charm/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (5.0ms)
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 2973ms (Views: 2934.0ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-09-29 01:47:52 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-09-29 01:47:52 -0400
+
+LoadError - Unable to autoload constant Api::SongsController, expected /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/app/controllers/api/songs_controller.rb to define it:
+
+Processing by Api::SongsController#index as JSON
+Started GET "/" for 127.0.0.1 at 2021-09-29 01:47:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 63ms (Views: 37.7ms | ActiveRecord: 23.8ms)
+
+
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (10.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (32.6ms)
+Completed 200 OK in 101ms (Views: 24.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/api/songs/3" for 127.0.0.1 at 2021-09-29 01:47:59 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.7ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-29 01:50:42 -0400
+Processing by StaticPagesController#root as */*
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 75ms (Views: 56.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/songs/4" for 127.0.0.1 at 2021-09-29 01:51:15 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.4ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs/2" for 127.0.0.1 at 2021-09-29 01:56:00 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (2.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.7ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 2.3ms)
+
+

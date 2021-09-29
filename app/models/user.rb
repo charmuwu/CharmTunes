@@ -5,7 +5,6 @@ class User < ApplicationRecord
     # validates :session_token, presence: true, uniqueness: true
     # validates :date_of_birth, :country_or_region, :profile_name, allow_nil: true
     
-    
     attr_reader :password
 
     after_initialize :ensure_session_token
@@ -32,5 +31,9 @@ class User < ApplicationRecord
     def reset_session_token!
         self.update!(session_token: SecureRandom.urlsafe_base64) && self.session_token
     end
+
+    has_many :playlists,
+        foreign_key: :playlist_id,
+        class_name: :Playlist
 
 end
