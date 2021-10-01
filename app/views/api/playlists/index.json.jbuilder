@@ -4,3 +4,4 @@
     end
 end
 
+#this is where we decide what our redux state looks like

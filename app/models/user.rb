@@ -33,7 +33,6 @@ class User < ApplicationRecord
     end
 
     has_many :playlists,
-        foreign_key: :playlist_id,
+        foreign_key: :user_id,
         class_name: :Playlist
-
 end
