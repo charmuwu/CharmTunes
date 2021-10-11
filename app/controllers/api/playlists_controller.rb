@@ -21,13 +21,31 @@ class Api::PlaylistsController < ApplicationController
     end
     def update
         #find playlist on the params
+        @playlist = Playlist.find_by(id: params[:id])
+        if current_user.id = @playlist.creator_id
+            #owner of playlist can update stuff
+            @playlist.update(title: params[:playlist][:title], 
+                description: params[:playlist][:description],
+                artwork: params[:playlist][:artwork]
+                genre: params[:playlist][:genre])
+            
+            render :show
+        else
+            #not the owner of the playlist
+            #don't let them touch the playlist
+        end
         #get information supplied from the playlist params
+        #@playlist.
     end
     def destroy
-        #@playlist params
-        #@playlist.destroy
-        #render :index
-        
+        @playlist = Playlist.find_by(id: params[:id])
+        if current_user.id = @playlist.creator_id
+            @playlist.destroy
+            render :index
+        else
+            #render you're not the owner of this playlist
+            #or should i make a button appear or not appear?
+        end
     end
 
     private
