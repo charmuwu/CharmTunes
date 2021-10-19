@@ -9,4 +9,8 @@ export const getPlaylist = playlistId => dispatch => fetchPlaylist(playlistId)
 export const getPlaylists = () => dispatch => fetchPlaylists()
     .then( (playlists) => dispatch({type: RECEIVE_PLAYLISTS, playlists}));
 
+export const newPlaylist = formPlaylist => dispatch => postPlaylist(formPlaylist)
+    .then((playlist) => dispatch({
+       type: RECEIVE_CURRENT_PLAYLIST,
+       playlist}), error => dispatch(receiveErrors(error.responseJSON)));
 
