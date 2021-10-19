@@ -8,14 +8,14 @@ class SidebarComponent extends React.Component{
     render(){
         const ifLoggedOut = () => (
             <div className="sidebarcontainer">
-                <h1>Home</h1>
-                <h1>Your Library</h1>
+                <h1 className="sidebarLinks">Home</h1>
+                <h1 className="sidebarLinks">Your Library</h1>
             </div>
         )
         const ifLoggedIn = () => (
             <div className="sidebarcontainer">
-                <h1>Home</h1>
-                <h1>Your Library</h1>
+                <h1 className="sidebarLinks">Home</h1>
+                <h1 className="sidebarLinks">Your Library</h1>
                 <Link className="sidebarcreatepl" to="/playlist">Create Playlist</Link>
             </div>
         )
