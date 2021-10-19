@@ -43,7 +43,7 @@ class Api::PlaylistsController < ApplicationController
             @playlist.destroy
             render :index
         else
-            #render you're not the owner of this playlist
+            #render remove playlist from library
             #or should i make a button appear or not appear?
         end
     end

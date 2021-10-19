@@ -42126,3 +42126,79 @@ Migrating to ChangePlaylists (20211011045147)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2021-10-19 16:03:12 -0400
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/65b1ba53b683d784/variables" for 127.0.0.1 at 2021-10-19 16:03:12 -0400
+Started GET "/" for 127.0.0.1 at 2021-10-19 16:03:16 -0400
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/866d19b1d9c01386/variables" for 127.0.0.1 at 2021-10-19 16:03:16 -0400
+Started GET "/" for 127.0.0.1 at 2021-10-19 16:03:18 -0400
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/08e6008a0dc2ba10/variables" for 127.0.0.1 at 2021-10-19 16:03:18 -0400
+Started GET "/" for 127.0.0.1 at 2021-10-19 16:04:36 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/charm/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (5.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 2053ms (Views: 2042.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-19 16:04:39 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-19 16:04:39 -0400
+
+LoadError - Unable to autoload constant Api::SongsController, expected /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/app/controllers/api/songs_controller.rb to define it:
+
+Processing by Api::SongsController#index as JSON
+Started GET "/" for 127.0.0.1 at 2021-10-19 16:04:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hpuS6glmYzGPF_uMT9pH0w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 58ms (Views: 34.2ms | ActiveRecord: 22.8ms)
+
+
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (22.2ms)
+Completed 200 OK in 88ms (Views: 26.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/songs/2" for 127.0.0.1 at 2021-10-19 17:13:54 -0400
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (14.9ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:7
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.4ms)
+Completed 200 OK in 25ms (Views: 9.0ms | ActiveRecord: 14.9ms)
+
+
