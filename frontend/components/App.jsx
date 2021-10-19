@@ -13,8 +13,9 @@ const App = () => (
     <div className="test">
       <div className="sidebarsplash">
         <Route exact path="/" component={SplashContainer} />
-        {/* <Route exact path="/" component={SidebarComponent}/> */}
+        <Route exact path="/" component={SidebarComponent}/>
       </div>
+      
       <Route exact path="/" component={MusicContainer} />
       <Route exact path="/" component={SongsContainer} />
     </div>
