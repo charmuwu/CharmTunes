@@ -16,7 +16,7 @@ class SidebarComponent extends React.Component{
             <div className="sidebarcontainer">
                 <h1 className="sidebarLinks">Home</h1>
                 <h1 className="sidebarLinks">Your Library</h1>
-                <Link className="sidebarcreatepl" to="/playlist">Create Playlist</Link>
+                <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
             </div>
         )
         return(
