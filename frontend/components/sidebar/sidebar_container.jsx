@@ -4,7 +4,8 @@ import { fetchPlaylist, fetchPlaylists, postPlaylist, deletePlaylist } from '../
 
 const mSTP = state => {
     return{
-        playlist: state.playlist
+        playlist: state.playlist,
+        user: state.user
     }
 };
 const mDTP = dispatch => ({

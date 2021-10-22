@@ -4,10 +4,10 @@ import {getSong, getSongs, playPause, currVol} from '../../actions/music_actions
 
 const mSTP = state => {
     return{
-    currentUser: state.entities.users[state.session.currentUser],
-    currentSong: state.session.currentSong,
-    isPlaying: state.session.isPlaying,
-    currentVolume: state.session.currentVolume
+        currentUser: state.entities.users[state.session.currentUser],
+        currentSong: state.session.currentSong,
+        isPlaying: state.session.isPlaying,
+        currentVolume: state.session.currentVolume
     }
 }
 const mDTP = dispatch => ({
