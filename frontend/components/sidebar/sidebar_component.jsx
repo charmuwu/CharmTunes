@@ -22,6 +22,7 @@ class SidebarComponent extends React.Component{
                     <div className="sidebarLinks">Your Library</div>
                 </div>
                 <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
+                {/* why doesn't this show up?  */}
             </div>
         )
         return(
