@@ -9,14 +9,15 @@ class SidebarComponent extends React.Component{
         const ifLoggedOut = () => (
             <div className="sidebarcontainer">
                 <div className="icon"></div>
-                <div className="sidebarLinks">Home</div>
+                <Link className="sidebarLinks" to={'/'}>Home</Link>
                 <div className="sidebarLinks">Your Library</div>
+                <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
             </div>
         )
         const ifLoggedIn = () => (
             <div className="sidebarcontainer">
                 <div className= "sbllinkcontainter">
-                    <div className="sidebarLinks" className="sblhome">Home</div>
+                    <Link className="sidebarLinks" className="sblhome" to={'/'}>Home</Link>
                 </div>
                 <div className= "sbllinkcontainter">
                     <div className="sidebarLinks">Your Library</div>
@@ -27,6 +28,7 @@ class SidebarComponent extends React.Component{
         )
         return(
             <div>
+                {console.log(this.props)}
                 {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
             </div>
         )

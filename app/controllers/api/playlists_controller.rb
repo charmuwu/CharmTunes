@@ -22,8 +22,9 @@ class Api::PlaylistsController < ApplicationController
     def update
         #find playlist on the params
         @playlist = Playlist.find_by(id: params[:id])
-        if current_user.id = @playlist.creator_id
+        if current_user.id == @playlist.creator_id
             #owner of playlist can update stuff
+            debugger
             @playlist.update(title: params[:playlist][:title], 
                 description: params[:playlist][:description],
                 artwork: params[:playlist][:artwork]
@@ -39,10 +40,11 @@ class Api::PlaylistsController < ApplicationController
     end
     def destroy
         @playlist = Playlist.find_by(id: params[:id])
-        if current_user.id = @playlist.creator_id
-            @playlist.destroy
+        if current_user.id == @playlist.creator_id
+            @playlist.delete
             render :index
         else
+            render json: @playlist.errors.full_messages, status: "422"
             #render remove playlist from library
             #or should i make a button appear or not appear?
         end
@@ -50,7 +52,6 @@ class Api::PlaylistsController < ApplicationController
 
     private
     def playlist_params
-        params.require(:playlist).permit(:title,:genre) #add in description,  thumbnail_url after
-        #add user_id?
+        params.require(:playlist).permit(:title, :genre, :description, :artwork)
     end
 end

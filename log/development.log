@@ -45510,3 +45510,1033 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:23:31 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/charm/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (5.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 3488ms (Views: 3476.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:23:35 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:23:35 -0400
+
+LoadError - Unable to autoload constant Api::SongsController, expected /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/app/controllers/api/songs_controller.rb to define it:
+
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (14.8ms)
+Completed 200 OK in 71ms (Views: 16.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:23:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:24:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:24:11 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:24:11 -0400
+Processing by Api::SongsController#index as JSON
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (3.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:24:11 -0400
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (6.3ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 3.3ms)
+
+
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by StaticPagesController#root as HTML
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (8.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 1.1ms)
+
+
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:25:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1670ms (Views: 1668.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:25:34 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.3ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:25:34 -0400
+Processing by StaticPagesController#root as HTML
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:25:34 -0400
+  Rendering static_pages/root.html within layouts/application
+Processing by Api::SongsController#index as JSON
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:25:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:25:54 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:25:54 -0400
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (7.9ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+Processing by StaticPagesController#root as HTML
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:25:54 -0400
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.8ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:26:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1646ms (Views: 1644.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:26:26 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:26:26 -0400
+Processing by StaticPagesController#root as HTML
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:26:26 -0400
+  Rendering static_pages/root.html within layouts/application
+Processing by Api::SongsController#index as JSON
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.9ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:28:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1862ms (Views: 1860.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:28:44 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:28:44 -0400
+Processing by Api::SongsController#index as JSON
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (3.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (5.7ms)
+  [1m[36mSong Load (1.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:28:44 -0400
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 3.7ms)
+
+
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.5ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:29:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:29:43 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.3ms)
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:29:43 -0400
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.7ms)
+
+
+Processing by StaticPagesController#root as HTML
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:29:43 -0400
+  Rendering static_pages/root.html within layouts/application
+Processing by Api::SongsController#index as JSON
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.4ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:29:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:29:45 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:29:45 -0400
+Processing by Api::SongsController#index as JSON
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:29:45 -0400
+  [1m[36mSong Load (3.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendering api/songs/index.json.jbuilder
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (4.9ms)
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 3.3ms)
+
+
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.0ms)
+Processing by StaticPagesController#root as HTML
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2021-10-25 15:30:01 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lpnIlk-3WyIhfE4UkF-jVw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ShS55GZ3v1GyQzM4ZEUZlQ"], ["updated_at", "2021-10-25 19:30:01.763699"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+  Rendering api/sessions/destroy.json.jbuilder
+  Rendered api/sessions/destroy.json.jbuilder (0.4ms)
+Completed 200 OK in 21ms (Views: 4.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:30:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:30:04 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:30:04 -0400
+Processing by Api::SongsController#index as JSON
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (3.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (5.5ms)
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 3.8ms)
+
+
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.6ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2021-10-25 15:30:06 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["updated_at", "2021-10-25 19:30:06.664388"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.4ms)
+Completed 200 OK in 212ms (Views: 9.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:30:06 -0400
+Processing by Api::SongsController#index as JSON
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:30:06 -0400
+  Rendering api/songs/index.json.jbuilder
+Processing by Api::SongsController#index as JSON
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.5ms)
+  Rendering api/songs/index.json.jbuilder
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:30:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:31:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:31:03 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:31:03 -0400
+Processing by Api::SongsController#index as JSON
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  Rendering api/songs/index.json.jbuilder
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:31:03 -0400
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.3ms)
+  Rendered api/songs/index.json.jbuilder (2.2ms)
+Processing by StaticPagesController#root as HTML
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.6ms)
+
+
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 820ms (Views: 817.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:32:11 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.8ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:32:11 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:32:11 -0400
+Processing by Api::SongsController#index as JSON
+Processing by StaticPagesController#root as HTML
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (1.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (4.3ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.2ms)
+
+
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mPlaylist Load (0.8ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:50:32 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 15:50:32 -0400
+Started GET "/" for 127.0.0.1 at 2021-10-25 15:50:32 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.4ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+
+
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Processing by StaticPagesController#root as HTML
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.8ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.9ms)
+
+
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 42ms (Views: 34.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1789ms (Views: 1778.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:05:35 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:05:35 -0400
+
+LoadError - Unable to autoload constant Api::SongsController, expected /mnt/c/Users/Andrew/documents/appacademy/CharmTunes/app/controllers/api/songs_controller.rb to define it:
+
+Processing by Api::SongsController#index as JSON
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/application_controller.rb:20
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 42ms (Views: 36.2ms | ActiveRecord: 3.8ms)
+
+
+  Rendered api/songs/index.json.jbuilder (14.1ms)
+Completed 200 OK in 56ms (Views: 11.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:05:42 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.8ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:05:42 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:05:42 -0400
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:06:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:06:54 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:06:54 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Processing by Api::SongsController#index as JSON
+  [1m[36mSong Load (2.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.6ms)
+  Rendering api/songs/index.json.jbuilder
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.3ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:06:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:07:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 1502ms (Views: 1500.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:07:10 -0400
+Processing by Api::SongsController#index as JSON
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:07:10 -0400
+  Rendering api/songs/index.json.jbuilder
+Processing by Api::SongsController#index as JSON
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (4.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.0ms)
+
+
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (1.7ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:07:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:08:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:08:31 -0400
+Processing by Api::SongsController#index as JSON
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:08:31 -0400
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::SongsController#index as JSON
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (4.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:08:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:08:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:08:41 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 16:08:41 -0400
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.7ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (2.9ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-25 16:08:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2021-10-25 17:01:21 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PY-t3s5X9En6TAo2AqHWhQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "13Pf1Ob8xQJVhnjxoJzrZQ"], ["updated_at", "2021-10-25 21:01:21.120922"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+  Rendering api/sessions/destroy.json.jbuilder
+  Rendered api/sessions/destroy.json.jbuilder (0.2ms)
+Completed 200 OK in 35ms (Views: 4.4ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2021-10-25 17:01:33 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "JNb9FdZ86jatu9gmacg6uw"], ["updated_at", "2021-10-25 21:01:34.079861"], ["id", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:32
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.3ms)
+Completed 200 OK in 192ms (Views: 4.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 17:01:34 -0400
+Started GET "/api/songs" for 127.0.0.1 at 2021-10-25 17:01:34 -0400
+Processing by Api::SongsController#index as JSON
+Started GET "/" for 127.0.0.1 at 2021-10-25 17:01:34 -0400
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (10.3ms)
+  Rendered api/songs/index.json.jbuilder (11.3ms)
+Completed 200 OK in 36ms (Views: 15.6ms | ActiveRecord: 4.3ms)
+
+
+Completed 200 OK in 29ms (Views: 10.8ms | ActiveRecord: 7.7ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JNb9FdZ86jatu9gmacg6uw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JNb9FdZ86jatu9gmacg6uw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JNb9FdZ86jatu9gmacg6uw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JNb9FdZ86jatu9gmacg6uw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AdjustPlaylists (20211026003846)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "playlists" DROP COLUMN "song_id"[0m
+  ↳ db/migrate/20211026003846_adjust_playlists.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "playlists" DROP COLUMN "creator"[0m
+  ↳ db/migrate/20211026003846_adjust_playlists.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "playlists" ADD "creator_id" integer[0m
+  ↳ db/migrate/20211026003846_adjust_playlists.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "playlists" ALTER COLUMN "creator_id" DROP NOT NULL[0m
+  ↳ db/migrate/20211026003846_adjust_playlists.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211026003846"]]
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateContraints (20211026004356)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "playlists" ALTER COLUMN "creator_id" SET NOT NULL[0m
+  ↳ db/migrate/20211026004356_update_contraints.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211026004356"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5173962787187623905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlaylist Load (0.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylist Create (3.8ms)[0m  [1m[32mINSERT INTO "playlists" ("title", "genre", "created_at", "updated_at", "description", "creator_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "hey"], ["genre", "ok boomer"], ["created_at", "2021-10-26 00:52:54.979839"], ["updated_at", "2021-10-26 00:52:54.979839"], ["description", "yes"], ["creator_id", 1]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  [1m[36mPlaylist Destroy (2.3ms)[0m  [1m[31mDELETE FROM "playlists" WHERE "playlists"."id" = $1[0m  [["id", 1]]
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m

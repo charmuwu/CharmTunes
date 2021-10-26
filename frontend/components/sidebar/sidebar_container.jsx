@@ -5,7 +5,7 @@ import { fetchPlaylist, fetchPlaylists, postPlaylist, deletePlaylist } from '../
 const mSTP = state => {
     return{
         playlist: state.playlist,
-        user: state.user
+        currentUser: state.entities.users[state.session.currentUser]
     }
 };
 const mDTP = dispatch => ({
