@@ -15,7 +15,6 @@ class Api::PlaylistsController < ApplicationController
 
             render :show
         else
-            
             render json: @playlist.errors.full_messages, status: "422"
         end
     end
@@ -29,14 +28,11 @@ class Api::PlaylistsController < ApplicationController
                 description: params[:playlist][:description],
                 artwork: params[:playlist][:artwork]
                 genre: params[:playlist][:genre])
-            
+                
             render :show
         else
-            #not the owner of the playlist
-            #don't let them touch the playlist
+            render json: @playlist.errors.full_messages, status: "422"
         end
-        #get information supplied from the playlist params
-        #@playlist.
     end
     def destroy
         @playlist = Playlist.find_by(id: params[:id])
