@@ -30,6 +30,7 @@ class SidebarComponent extends React.Component{
             <div>
                 {console.log(this.props)}
                 {/* it's not showing currentUser in props... */}
+                {console.log(this.state)}
                 {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
             </div>
         )
