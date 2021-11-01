@@ -12,7 +12,6 @@ class Api::PlaylistsController < ApplicationController
         @playlist = Playlist.new(playlist_params)
         @playlist.creator_id = current_user.id
         if @playlist.save
-
             render :show
         else
             render json: @playlist.errors.full_messages, status: "422"

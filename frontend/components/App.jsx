@@ -23,6 +23,7 @@ const App = () => (
       <ProtectedRoute path="/users" />
       <AuthRoute path="/signup" component={SignUpContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
+      <ProtectedRoute path="/playlists" component={} />
     </Switch>
   </div>
 );
