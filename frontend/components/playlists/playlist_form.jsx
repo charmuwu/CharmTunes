@@ -10,10 +10,11 @@ class PlaylistForm extends React.Component {
             genre: '',
             artwork: '',
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    componentDidMount(){
+    // componentDidMount(){
             
-    };
+    // };
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state)
@@ -22,6 +23,7 @@ class PlaylistForm extends React.Component {
     render() {
         return (
             <div>
+                test
                 <form onSubmit={this.handleSubmit} className="playlistForm">
                     <label id="plformlabel" htmlFor="pltitle">
                         title
@@ -34,9 +36,17 @@ class PlaylistForm extends React.Component {
                         value={this.state.title}
                         onChange={this.update('title')}
                     />
-                    <label >
+                    <label id="plformlabel" htmlFor="pldescription">
                         description
                     </label>
+                    <input
+                        id="pldescription"
+                        className="input"
+                        type='description'
+                        placeholder="Describe the playlist"
+                        value={this.state.description}
+                        onChange={this.update('description')}
+                    />
                     <label >
                         other thing
                     </label>

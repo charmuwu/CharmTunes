@@ -7,6 +7,7 @@ import MusicContainer from "./musicplayer/music_container";
 import {AuthRoute, ProtectedRoute} from '../utils/route_utils';
 import SongsContainer from "./songs/songs_container";
 import SidebarComponent from "./sidebar/sidebar_component";
+import PlaylistContainer from "./playlists/playlist_containter";
 
 const App = () => (
   <div>
@@ -23,7 +24,7 @@ const App = () => (
       <ProtectedRoute path="/users" />
       <AuthRoute path="/signup" component={SignUpContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
-      <ProtectedRoute path="/playlists" component={} />
+      <ProtectedRoute path="/playlist" component={PlaylistContainer} />
     </Switch>
   </div>
 );
