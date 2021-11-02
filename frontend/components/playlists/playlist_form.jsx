@@ -20,7 +20,12 @@ class PlaylistForm extends React.Component {
         this.props.action(this.state)
         .then(() => this.props.history.push("/"));
     }
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value });
+    }
     render() {
+        //get array of playlists and length of array
+        //
         return (
             <div>
                 test
@@ -48,8 +53,17 @@ class PlaylistForm extends React.Component {
                         onChange={this.update('description')}
                     />
                     <label >
-                        other thing
+                        genre
                     </label>
+                    <input
+                        id="plgenre"
+                        className="input"
+                        type='genre'
+                        // placeholder=""
+                        value={this.state.genre}
+                        onChange={this.update('genre')}
+                    />
+                    {/* how do i upload artwork? */}
                 </form>
             </div>
         )
