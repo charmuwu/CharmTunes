@@ -27,8 +27,14 @@ class PlaylistForm extends React.Component {
         //get array of playlists and length of array
         //
         return (
+            //artwork on the left
+            //playlist title here
+            //playlist creator name here
+            //list of songs here
+            
+            // create modal for this form specifically
             <div>
-                test
+                Edit details
                 <form onSubmit={this.handleSubmit} className="playlistForm">
                     <label id="plformlabel" htmlFor="pltitle">
                         title
@@ -64,6 +70,10 @@ class PlaylistForm extends React.Component {
                         onChange={this.update('genre')}
                     />
                     {/* how do i upload artwork? */}
+                    <div className="savebtn">
+                        <button type='submit' className="savebutton">SAVE</button>
+                    </div>
+                    <p>By proceeding, you agree to give CharmTunes access to the image you choose to upload. Please make sure you have the right to upload the image.</p>
                 </form>
             </div>
         )
