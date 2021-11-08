@@ -25,7 +25,7 @@ class Api::PlaylistsController < ApplicationController
             debugger
             @playlist.update(title: params[:playlist][:title], 
                 description: params[:playlist][:description],
-                artwork: params[:playlist][:artwork]
+                artwork: params[:playlist][:artwork],
                 genre: params[:playlist][:genre])
                 
             render :show
