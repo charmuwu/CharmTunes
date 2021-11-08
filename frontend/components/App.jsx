@@ -10,21 +10,22 @@ import SidebarComponent from "./sidebar/sidebar_component";
 import PlaylistContainer from "./playlists/playlist_containter";
 
 const App = () => (
+  
   <div>
     <div className="test">
       <div className="sidebarsplash">
-        <Route exact path="/" component={SplashContainer} />
+        <Route path="/" component={SplashContainer} />
         <Route exact path="/" component={SidebarComponent}/>
       </div>
       
-      <Route exact path="/" component={MusicContainer} />
+      <Route path="/" component={MusicContainer} />
       <Route exact path="/" component={SongsContainer} />
     </div>
     <Switch>
       <ProtectedRoute path="/users" />
       <AuthRoute path="/signup" component={SignUpContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
-      <ProtectedRoute path="/playlist" component={PlaylistContainer} />
+      <ProtectedRoute exact path="/playlist" component={PlaylistContainer} />
     </Switch>
   </div>
 );

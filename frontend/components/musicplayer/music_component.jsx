@@ -104,6 +104,10 @@ class MusicComponent extends React.Component {
         //{this.audioRef.current.duration}
     }
     render() {
+        const {pathname} = this.props.location;
+        if (pathname === "/login" || pathname === "/signup"){
+            return null;
+        }
         // console.log(this.props.currentSong);
         const ifLoggedOut = () => (
             <div className="loggedoutmusicbanner" id="bottomsignupsplash">

@@ -6,6 +6,10 @@ class SplashComponent extends React.Component{
         super(props)
     }
     render(){
+        const {pathname} = this.props.location;
+        if (pathname === "/login" || pathname === "/signup"){
+            return null;
+        }
         function btnclickdrop(){ 
             const dropdwn = document.getElementById("drpdwnmenu");
             dropdwn.classList.toggle("show");
