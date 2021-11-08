@@ -6,12 +6,17 @@ class SidebarComponent extends React.Component{
         super(props)
     }
     render(){
+        const {pathname} = this.props.location;
+        if (pathname === "/login" || pathname === "/signup"){
+            return null;
+        }
         const ifLoggedOut = () => (
             <div className="sidebarcontainer">
                 <div className="icon"></div>
                 <Link className="sidebarLinks" to={'/'}>Home</Link>
                 <div className="sidebarLinks">Your Library</div>
                 <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
+                {/* get all the user's playlists and render them as components here. */}
             </div>
         )
         const ifLoggedIn = () => (

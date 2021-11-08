@@ -15,17 +15,17 @@ const App = () => (
     <div className="test">
       <div className="sidebarsplash">
         <Route path="/" component={SplashContainer} />
-        <Route exact path="/" component={SidebarComponent}/>
+        <Route path="/" component={SidebarComponent}/>
       </div>
       
       <Route path="/" component={MusicContainer} />
       <Route exact path="/" component={SongsContainer} />
+      <ProtectedRoute exact path="/playlist" component={PlaylistContainer} />
     </div>
     <Switch>
       <ProtectedRoute path="/users" />
       <AuthRoute path="/signup" component={SignUpContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
-      <ProtectedRoute exact path="/playlist" component={PlaylistContainer} />
     </Switch>
   </div>
 );
