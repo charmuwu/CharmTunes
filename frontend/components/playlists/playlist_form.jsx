@@ -5,7 +5,7 @@ class PlaylistForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: '',
+            title: 'My Playlist',
             description: '',
             genre: '',
             artwork: ''
