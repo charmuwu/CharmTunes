@@ -1,27 +1,17 @@
 class Api::PlaylistsSongsController < ApplicationController
-    # def index
-    #     @playlists_songs = PlaylistSong.all
-    #     render :index
-    # end
-
-    # def show
-    #     @playlist_song = PlaylistSong.find_by(id: params[:id]) 
-    #     render :show
-    # end
-
+    def index
+        playlist_id = Playlist.find_by(id: params[:id])
+        @playlists_songs = PlaylistSong.where("playlist_id = #{playlist_id}")
+        render :index
+    end
     def create
-        @song = Song.find_by(id: 
-        #?
-        )
-        @playlist = Playlist.find_by(id: 
-        #?
-        )
-
+        # song = Song.find_by(id: params[:songid])
+        # playlist = Playlist.find_by(id: params[:playlistid])
         @playlist_song = PlaylistSong.new(
-            playlist_id: @playlist.id,
-            song_id:  @song.id
+            playlist_song_params
+            # playlist_id: @playlist.id,
+            # song_id:  @song.id
         )
-
         if @playlist_song.save
             render :show
         else
@@ -29,19 +19,14 @@ class Api::PlaylistsSongsController < ApplicationController
         end
     end
 
-    # def update
-    #     @playlist_song = PlaylistSong.find_by(id: params[:id])
-    #     @playlist_song.update(
-    #         # do we need an update if we can just delete and create?
-    #     )
-    # end
-
     def destroy
         @playlist_song = PlaylistSong.find_by(id: params[:id])
         @playlist_song.delete
         #render index?
         #render errors?
     end
-
-    
+    private
+    def playlist_song_params
+        params.require(:playlistsong).permit(:playlist_id,:song_id)
+    end
 end
