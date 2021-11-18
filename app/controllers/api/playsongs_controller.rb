@@ -1,13 +1,13 @@
 class Api::PlaylistsSongsController < ApplicationController
     def index
-        playlist_id = Playlist.find_by(id: params[:id])
-        @playlists_songs = PlaylistSong.where("playlist_id = #{playlist_id}")
+        # playlist = Playlist.find_by(id: params[:playlist_id])
+        @playlists_songs = Playsong.where("playlist_id = #{params[:playlist_id]}")
         render :index
     end
     def create
         # song = Song.find_by(id: params[:songid])
         # playlist = Playlist.find_by(id: params[:playlistid])
-        @playlist_song = PlaylistSong.new(
+        @playlist_song = Playsong.new(
             playlist_song_params
             # playlist_id: @playlist.id,
             # song_id:  @song.id
@@ -27,6 +27,6 @@ class Api::PlaylistsSongsController < ApplicationController
     end
     private
     def playlist_song_params
-        params.require(:playlistsong).permit(:playlist_id,:song_id)
+        params.require(:playsong).permit(:playlist_id,:song_id)
     end
 end
