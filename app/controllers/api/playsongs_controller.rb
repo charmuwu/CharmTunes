@@ -20,8 +20,8 @@ class Api::PlaylistsSongsController < ApplicationController
     end
 
     def destroy
-        @playlist_song = PlaylistSong.find_by(id: params[:id])
-        @playlist_song.delete
+        playlist_song = Playsong.find_by(id: params[:id])
+        playlist_song.delete
         #render index?
         #render errors?
     end

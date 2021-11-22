@@ -7,6 +7,7 @@ class Api::PlaylistsController < ApplicationController
     def show
         @playlist = Playlist.find_by(id: params[:id])
         playsongs = Playsong.where(playlist_id: @playlist.id)
+        @songs = Song.where(song_id: playsongs.song_id)
         @songs = playsongs.each  do |song_id|
             # .include to avoid n+1 query
         end
