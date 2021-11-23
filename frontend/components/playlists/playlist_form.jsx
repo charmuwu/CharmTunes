@@ -25,7 +25,7 @@ class PlaylistForm extends React.Component {
     }
     render() {
         //get array of playlists and length of array
-        //
+        // add in playsong query here 
         return (
             <div className="playlistContainer">
                 <div className="plinfobar">
