@@ -5,6 +5,7 @@ export const RECEIVE_PLAYLISTS = 'RECEIVE_PLAYLISTS';
 export const DELETE_PLAYLIST = 'DELETE_PLAYLIST';
 export const RECEIVE_PLAYLIST = 'RECEIVE_PLAYLIST';
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_PLAYSONGS = "RECEIVE_PLAYSONGS";
 
 export const receiveErrors = (errors) => ({
     type: RECEIVE_ERRORS,
@@ -13,8 +14,8 @@ export const receiveErrors = (errors) => ({
 //getPlaysong(s) what else should i add in?
 //I need songs in a specific playlistId
 
-//export const getPlaysongs = playlistId => dispatch => fetchPlaysongs(playlistId)
-// .then( playlist => dispatch({type: RECEIVE_PLAYSONGS, playsongs}))
+export const getPlaysongs = playlistId => dispatch => fetchPlaysongs(playlistId)
+.then( playlist => dispatch({type: RECEIVE_PLAYSONGS, playsongs}))
 
 export const getPlaylist = playlistId => dispatch => fetchPlaylist(playlistId)
     .then( playlist => dispatch({type: RECEIVE_CURRENT_PLAYLIST, playlist}));
