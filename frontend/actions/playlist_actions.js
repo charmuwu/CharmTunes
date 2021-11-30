@@ -15,7 +15,7 @@ export const receiveErrors = (errors) => ({
 //I need songs in a specific playlistId
 
 export const getPlaysongs = playlistId => dispatch => fetchPlaysongs(playlistId)
-.then( playlist => dispatch({type: RECEIVE_PLAYSONGS, playsongs}))
+.then( playsongs => dispatch({type: RECEIVE_PLAYSONGS, playsongs}))
 
 export const getPlaylist = playlistId => dispatch => fetchPlaylist(playlistId)
     .then( playlist => dispatch({type: RECEIVE_CURRENT_PLAYLIST, playlist}));

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PlaylistForm from './playlist_form';
-import {getPlaylist, getPlaylists, newPlaylist, noMorePlaylist} from '../../actions/playlist_actions';
+import {getPlaysongs, getPlaylist, getPlaylists, newPlaylist, noMorePlaylist} from '../../actions/playlist_actions';
 
 const mSTP = state => {
     return{
