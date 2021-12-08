@@ -27,7 +27,6 @@ class Api::PlaylistsController < ApplicationController
         @playlist = Playlist.find_by(id: params[:id])
         if current_user.id == @playlist.creator_id
             #owner of playlist can update stuff
-            debugger
             @playlist.update(title: params[:playlist][:title], 
                 description: params[:playlist][:description],
                 artwork: params[:playlist][:artwork],
