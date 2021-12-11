@@ -13,7 +13,7 @@ const mDTP = dispatch => {
     return{
         createPlaylist: formPlaylist => dispatch(newPlaylist(formPlaylist)),
         deletePlaylist: playlist => dispatch(noMorePlaylist(playlist)),
-        fetchPlaysongs: playsongs => dispatch(getPlaysongs(playlistId)),
+        fetchPlaysongs: playsongs => dispatch(getPlaysongs(playsongs)),
     }
 };
 export default connect(mSTP, mDTP)(PlaylistForm);

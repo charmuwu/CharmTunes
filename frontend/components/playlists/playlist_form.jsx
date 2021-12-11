@@ -13,7 +13,7 @@ class PlaylistForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     // componentDidMount(){
-            
+            //this.props.fetchPlaysongs(playlistid)
     // };
     handleSubmit(e) {
         e.preventDefault();
@@ -27,8 +27,10 @@ class PlaylistForm extends React.Component {
         //get array of playlists and length of array
         // add in playsong query here 
         return (
-            
             <div className="playlistContainer">
+                <div>
+                    
+                </div>
                 <div className="plinfobar">
                     <div className="plartwork">
                         {/* this.state.artwork inside image tag or something */}
@@ -48,7 +50,9 @@ class PlaylistForm extends React.Component {
                                 {/* get name of the user here */}
                             </div>
                             <div className="pldnumberofsongs">
-                                {/* playlist song length */}
+                                {/* playlist song length 
+                                get the list of songs using playsong action
+                                */}
                             </div>
                             <div className="pldtotallength">
                                 {/* total length of all songs together */}
