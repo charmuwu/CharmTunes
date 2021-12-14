@@ -29,7 +29,7 @@ class PlaylistForm extends React.Component {
         return (
             <div className="playlistContainer">
                 <div>
-                    
+                    add song
                 </div>
                 <div className="plinfobar">
                     <div className="plartwork">

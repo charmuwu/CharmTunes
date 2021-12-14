@@ -5,6 +5,9 @@ class SidebarComponent extends React.Component{
     constructor(props){
         super(props)
     }
+    componentDidMount(){
+        this.props.fetchPlaylists();
+    }
     render(){
         const {pathname} = this.props.location;
         if (pathname === "/login" || pathname === "/signup"){
@@ -16,10 +19,15 @@ class SidebarComponent extends React.Component{
                 <Link className="sidebarLinks" to={'/'}>Home</Link>
                 <div className="sidebarLinks">Your Library</div>
                 <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
-                {/* get all the user's playlists and render them as components here. */}
+                
             </div>
         )
+        let playlists;
+        if(this.props.playlists){
+            playlists = Object.values(this.props.playlists)
+        }
         const ifLoggedIn = () => (
+            
             <div className="sidebarcontainer">
                 <div className= "sbllinkcontainter">
                     <Link className="sidebarLinks" className="sblhome" to={'/'}>Home</Link>
@@ -28,6 +36,16 @@ class SidebarComponent extends React.Component{
                     <div className="sidebarLinks">Your Library</div>
                 </div>
                 <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
+                <div>
+                    {/* {playlists = this.props.getPlaylists()} */}
+                    {playlists.map( playlistObj =>(
+                        <Link className="sidebarplaylists">
+                            {playlistObj.title}
+                        </Link>
+                        
+                    )) }
+                </div>
+                {/* get all the user's playlists and render them as components here. */}
                 {/* why doesn't this show up?  */}
             </div>
         )
