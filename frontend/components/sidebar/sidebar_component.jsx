@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 
 class SidebarComponent extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {
+            currentUser: '',
+            playlistId: 5,
+        };
     }
     componentDidMount(){
-        this.props.fetchPlaylists();
+        // this.props.getPlaylists(this.state.playlistId);
     }
     render(){
         const {pathname} = this.props.location;

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SidebarComponent from './sidebar_component';
-import { fetchPlaylist, fetchPlaylists, postPlaylist, deletePlaylist } from '../../action/playlist_actions';
+import { getPlaylist, fetchPlaylists, postPlaylist, deletePlaylist } from '../../action/playlist_actions';
 
 const mSTP = state => {
     return{
@@ -10,7 +10,7 @@ const mSTP = state => {
 };
 const mDTP = dispatch => ({
     getPlaylist: playlistId => dispatch(fetchPlaylist(playlistId)),
-    fetchPlaylists: () => dispatch(fetchPlaylists()),
+    getPlaylists: () => dispatch(getPlaylists()),
     newPlaylist: playlist => dispatch(postPlaylist(playlist))
 
 });

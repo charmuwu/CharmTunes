@@ -5,6 +5,7 @@ import Root from './components/root'
 import { postUser , postSession, deleteSession } from './utils/session_api_util'
 import { signup, logout } from './actions/session_actions';
 import { getSongs } from './actions/music_actions';
+import { getPlaylists } from './actions/playlist_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let preloadedState = undefined;
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.signup = signup;
     window.logout = logout;
     window.getSongs = getSongs;
+    window.getPlaylists = getPlaylists;
 
     ReactDOM.render(<Root store={store} />, root);
 });
