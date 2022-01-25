@@ -1,6 +1,6 @@
 @playlists.each do |playlist|
     json.set! playlist.id do
-        json.extract! playlist, :id, :title, :genre, :creator, :description
+        json.extract! playlist, :id, :title, :genre, :creator_id, :description
     end
 end
 

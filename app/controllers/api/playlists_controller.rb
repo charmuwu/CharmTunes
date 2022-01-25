@@ -1,6 +1,6 @@
 class Api::PlaylistsController < ApplicationController
     def index
-        @playlists = Playlist.all #Playlist.where(uid = currentuid)
+        @playlists = Playlist.where(creator_id: current_user.id)
         render :index
         
     end

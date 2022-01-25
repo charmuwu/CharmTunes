@@ -10,7 +10,8 @@ class SidebarComponent extends React.Component{
         };
     }
     componentDidMount(){
-        // this.props.getPlaylists(this.state.playlistId);
+        this.props.getPlaylists();
+        debugger
     }
     render(){
         const {pathname} = this.props.location;
@@ -43,7 +44,7 @@ class SidebarComponent extends React.Component{
                 <div>
                     {/* {playlists = this.props.getPlaylists()} */}
                     {playlists.map( playlistObj =>(
-                        <Link className="sidebarplaylists">
+                        <Link className="sidebarplaylists" key={playlistObj.id} to={`/playlist/${playlistObj.id}`}>
                             {playlistObj.title}
                         </Link>
                         
