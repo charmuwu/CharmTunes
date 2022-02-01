@@ -34,6 +34,7 @@ class SidebarComponent extends React.Component{
         const ifLoggedIn = () => (
             
             <div className="sidebarcontainer">
+                <div className="icon"></div>
                 <div className= "sbllinkcontainter">
                     <Link className="sidebarLinks" className="sblhome" to={'/'}>Home</Link>
                 </div>
