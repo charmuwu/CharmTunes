@@ -17,7 +17,7 @@ class MusicComponent extends React.Component {
             // volume: initialVol,
             progress: 0.0,
             currentTime: 0.0,
-            duration: 0.0,
+            duration: 0.00,
             muted: false,
         }
 
@@ -171,7 +171,7 @@ class MusicComponent extends React.Component {
                             {/* display the current time in minutes:seconds here*/}
                             {Math.floor(this.state.currentTime / 60)}:
                             {Math.floor(this.state.currentTime) % 60 < 10 ? `0${Math.floor(this.state.currentTime) % 60}`
-                            : Math.floor(this.state.currentTime) % 60}
+                            : Math.floor(this.state.currentTime) % 60} 
                         </div>
                         <input 
                             type="range"
@@ -183,7 +183,8 @@ class MusicComponent extends React.Component {
                             >
                         </input>
                         <div className="songtime">
-                            {Math.floor(this.state.duration / 60)}:{Math.floor(this.state.duration)%60}
+                            {Math.floor(this.state.duration / 60)}:{Math.floor(this.state.duration) % 60 < 10 ? `0${Math.floor(this.state.duration) % 60}` 
+                            : Math.floor(this.state.duration) % 60}
                         </div>
                     </div>
                 </div>

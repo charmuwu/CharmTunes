@@ -11,7 +11,7 @@ class SidebarComponent extends React.Component{
     }
     componentDidMount(){
         this.props.getPlaylists();
-        debugger
+        // debugger
     }
     render(){
         const {pathname} = this.props.location;
