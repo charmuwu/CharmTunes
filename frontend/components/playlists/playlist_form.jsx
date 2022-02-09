@@ -79,7 +79,7 @@ class PlaylistForm extends React.Component {
                 </div>
                 
                 <button id="myBtn" onClick={this.handlePLClickOpen}> Open Modal</button>
-
+                {/* {window.onclick = this.handlePLClickClose} */}
                 {/* everything below should be in a modal form */}
                 <div id="playlistModal" className="playlistModalyay">
                     <div className="playlistModalContent">
@@ -91,9 +91,7 @@ class PlaylistForm extends React.Component {
                             </svg>
                         </button>
                         <form onSubmit={this.handleSubmit} className="playlistForm">
-                            <label id="plformlabel" htmlFor="pltitle">
-                                title
-                            </label>
+                            <label id="plformlabel" htmlFor="pltitle"></label>
                             <input
                                 id="pltitle"
                                 className="plinput"
@@ -102,8 +100,7 @@ class PlaylistForm extends React.Component {
                                 value={this.state.title}
                                 onChange={this.update('title')}
                                 />
-                            <label id="plformlabel" htmlFor="pldescription">
-                            </label>
+                            <label id="plformlabel" htmlFor="pldescription"></label>
                             <input
                                 id="pldescription"
                                 className="input"
@@ -112,14 +109,12 @@ class PlaylistForm extends React.Component {
                                 value={this.state.description}
                                 onChange={this.update('description')}
                                 />
-                            <label >
-                                genre
-                            </label>
+                            <label id="plformlabel" htmlFor="plgenre"></label>
                             <input
                                 id="plgenre"
                                 className="input"
                                 type='genre'
-                                // placeholder=""
+                                placeholder="genre"
                                 value={this.state.genre}
                                 onChange={this.update('genre')}
                                 />
