@@ -11,7 +11,6 @@ class SidebarComponent extends React.Component{
     }
     componentDidMount(){
         this.props.getPlaylists();
-        // debugger
     }
     render(){
         const {pathname} = this.props.location;
@@ -21,10 +20,34 @@ class SidebarComponent extends React.Component{
         const ifLoggedOut = () => (
             <div className="sidebarcontainer">
                 <div className="icon"></div>
-                <Link className="sidebarLinks" to={'/'}>Home</Link>
-                <div className="sidebarLinks">Your Library</div>
-                <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
-                
+
+                <Link className="sidebarnavs" to={'/'}>
+                    <svg className="houseicon">
+                        <path fill="#afafaf" d="M9 14h6v7h5V7.8l-8-4.6-8 4.6V21h5v-7zm1 8H3V7.2L12 2l9 5.2V22h-7v-7h-4v7z"></path>
+                    </svg>
+                    Home
+                </Link>
+
+                <div>
+                    {/* to divide */}
+                </div>
+
+                <Link className="sidebarnavs">
+                    <svg className="houseicon">
+                        <path fill="#afafaf" d="M14.617 3.893l-1.827.814 7.797 17.513 1.827-.813-7.797-17.514zM3 22h2V4H3v18zm5 0h2V4H8v18z"></path>
+                    </svg>
+                    Your Library
+                </Link>
+
+                <div>
+                    {/* to divide */}
+                </div>
+
+                <Link className="sidebarnavs" to={'/playlist'}>
+                    <div className="createplicon"></div>
+                    Create Playlist
+                </Link>
+  
             </div>
         )
         let playlists;
@@ -36,24 +59,31 @@ class SidebarComponent extends React.Component{
             <div className="sidebarcontainer">
                 <div className="icon"></div>
 
-                <div className="sidebarnavs">
+                <Link className="sidebarnavs" to={'/'}>
                     <svg className="houseicon">
                         <path fill="#afafaf" d="M9 14h6v7h5V7.8l-8-4.6-8 4.6V21h5v-7zm1 8H3V7.2L12 2l9 5.2V22h-7v-7h-4v7z"></path>
                     </svg>
-                    <Link className="sidebarLinks" to={'/'}>Home</Link>
+                    Home
+                </Link>
+
+                <div>
+                    {/* to divide */}
                 </div>
-                
-                <div className="sidebarnavs">
+
+                <Link className="sidebarnavs">
                     <svg className="houseicon">
                         <path fill="#afafaf" d="M14.617 3.893l-1.827.814 7.797 17.513 1.827-.813-7.797-17.514zM3 22h2V4H3v18zm5 0h2V4H8v18z"></path>
                     </svg>
-                    <Link className="sidebarLinks">Your Library</Link>
-                </div>
+                    Your Library
+                </Link>
 
+                <div>
+                    {/* to divide */}
+                </div>
+                
                 <Link className="sidebarnavs" to={'/playlist'}>
                     <div className="createplicon"></div>
                     Create Playlist
-                    {/* <div className="sidebarcreatepl" ></div> */}
                 </Link>
             
                 <div className="dividersidebarpl">
@@ -66,8 +96,7 @@ class SidebarComponent extends React.Component{
                             className="sidebarplaylists" 
                             to={`/playlist/${playlistObj.id}`}>
                                 {playlistObj.title}
-                        </Link>
-                        
+                        </Link>    
                     )) }
                 </div>
 

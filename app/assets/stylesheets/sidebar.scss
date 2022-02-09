@@ -12,17 +12,6 @@
     padding-left: 15px;
     font-family: spotify-circular, Helvetica, Arial, sans-serif;
 }
-.sbllinkcontainer {
-    padding-block: 10px;
-}
-.sidebarLinks {
-    font-weight: 700;
-    letter-spacing: normal;
-    line-height: 16px;
-    text-transform: none;
-    color: #afafaf;
-    text-decoration: none;
-}
 .sidebarnavs{
     color: #afafaf;
     font-weight: 700;
@@ -32,7 +21,6 @@
     color: white;
     font-weight: 700;
     text-decoration: none;
-
 }
 
 .houseicon{
@@ -47,7 +35,6 @@
     margin-top: 15px;
     // background: transparent;
 }
-
 .createplicon{
     margin-right: 15px;
     margin-top: 30px;
@@ -63,17 +50,6 @@
     background-size: 60% 2px,2px 60%; /*thickness = 2px, length = 50% (25px)*/
     background-repeat:no-repeat;
 }
-
-.sidebarcreatepl{
-    margin-top: -15px;
-    
-    color: #afafaf;
-    font-weight: 700;
-    text-decoration: none;
-}
-.sidebarcreatepl:hover{
-    color: white;
-}
 .sidebarplaylists {
     display: flex;
     color: #afafaf;
@@ -87,12 +63,11 @@
     color: white;
 }
 
-
 .dividersidebarpl {
     border-top: 1px solid #1b1b1b;
     width: 170px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     // margin-left: 15px;
     // padding-right: 5px;
 }
