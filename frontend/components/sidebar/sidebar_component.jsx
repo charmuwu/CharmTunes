@@ -47,6 +47,10 @@ class SidebarComponent extends React.Component{
                     <div className="createplicon"></div>
                     Create Playlist
                 </Link>
+
+                <div className="dividersidebarpl">
+                    {/* feels better to have than nothing on offline mode */}
+                </div>
   
             </div>
         )
