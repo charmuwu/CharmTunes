@@ -21,7 +21,8 @@ const App = () => (
       
       <Route path="/" component={MusicContainer} />
       <Route exact path="/" component={SongsContainer} />
-      <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer} />
+      {/* <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer} /> */}
+      <ProtectedRoute path="/playlist" component={PlaylistContainer} />
     </div>
     <Switch>
       <ProtectedRoute path="/users" />
