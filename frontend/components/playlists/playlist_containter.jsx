@@ -12,6 +12,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return{
         createPlaylist: formPlaylist => dispatch(newPlaylist(formPlaylist)),
+        getPlaylist: playlistId => dispatch(getPlaylist(playlistId)),
+        getPlaylists: () => dispatch(getPlaylists()),
         deletePlaylist: playlist => dispatch(noMorePlaylist(playlist)),
         fetchPlaysongs: playsongs => dispatch(getPlaysongs(playsongs)),
     }
