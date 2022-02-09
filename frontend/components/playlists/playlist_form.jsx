@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { RECEIVE_CURRENT_USER } from '../../actions/session_actions';
 
 class PlaylistForm extends React.Component {
     constructor(props) {
@@ -66,6 +67,7 @@ class PlaylistForm extends React.Component {
                         <div className="pldetailscreator">
                             <div className="pldcreatorname">
                                 {/* get name of the user here */}
+                                {/* {console.log(RECEIVE_CURRENT_USER)} */}
                             </div>
                             <div className="pldnumberofsongs">
                                 {/* playlist song length 
@@ -99,45 +101,47 @@ class PlaylistForm extends React.Component {
                                 </svg>
                             </button>
                         </div>
-                        <div className="plformartwork">
-                            <svg className="playlistartwork">
-                                <path fill="#afafaf" d="M25.6 11.565v45.38c-2.643-3.27-6.68-5.37-11.2-5.37-7.94 0-14.4 6.46-14.4 14.4s6.46 14.4 14.4 14.4 14.4-6.46 14.4-14.4v-51.82l48-10.205V47.2c-2.642-3.27-6.678-5.37-11.2-5.37-7.94 0-14.4 6.46-14.4 14.4s6.46 14.4 14.4 14.4S80 64.17 80 56.23V0L25.6 11.565zm-11.2 65.61c-6.176 0-11.2-5.025-11.2-11.2 0-6.177 5.024-11.2 11.2-11.2 6.176 0 11.2 5.023 11.2 11.2 0 6.174-5.026 11.2-11.2 11.2zm51.2-9.745c-6.176 0-11.2-5.024-11.2-11.2 0-6.174 5.024-11.2 11.2-11.2 6.176 0 11.2 5.026 11.2 11.2 0 6.178-5.026 11.2-11.2 11.2z"></path>
-                            </svg>
-                        </div>
-                        <form onSubmit={this.handleSubmit} className="playlistForm">
-                            <label id="plformlabel" htmlFor="pltitle"></label>
-                            <input
-                                id="pltitle"
-                                className="plinput"
-                                type='text'
-                                placeholder='Playlist #1'//get user's playlist count and add # interpolate
-                                value={this.state.title}
-                                onChange={this.update('title')}
-                                />
-                            <label id="plformlabel" htmlFor="pldescription"></label>
-                            <input
-                                id="pldescription"
-                                className="input"
-                                type='description'
-                                placeholder="Add a description"
-                                value={this.state.description}
-                                onChange={this.update('description')}
-                                />
-                            <label id="plformlabel" htmlFor="plgenre"></label>
-                            <input
-                                id="plgenre"
-                                className="input"
-                                type='genre'
-                                placeholder="genre"
-                                value={this.state.genre}
-                                onChange={this.update('genre')}
-                                />
-                            {/* upload artwork feature to be implemented here */}
-                            <div className="savebtn">
-                                <button type='submit' className="savebutton">SAVE</button>
+                        <div className="secondModalDiv">
+                            <div className="plformartwork">
+                                <svg className="playlistartwork">
+                                    <path fill="#afafaf" d="M25.6 11.565v45.38c-2.643-3.27-6.68-5.37-11.2-5.37-7.94 0-14.4 6.46-14.4 14.4s6.46 14.4 14.4 14.4 14.4-6.46 14.4-14.4v-51.82l48-10.205V47.2c-2.642-3.27-6.678-5.37-11.2-5.37-7.94 0-14.4 6.46-14.4 14.4s6.46 14.4 14.4 14.4S80 64.17 80 56.23V0L25.6 11.565zm-11.2 65.61c-6.176 0-11.2-5.025-11.2-11.2 0-6.177 5.024-11.2 11.2-11.2 6.176 0 11.2 5.023 11.2 11.2 0 6.174-5.026 11.2-11.2 11.2zm51.2-9.745c-6.176 0-11.2-5.024-11.2-11.2 0-6.174 5.024-11.2 11.2-11.2 6.176 0 11.2 5.026 11.2 11.2 0 6.178-5.026 11.2-11.2 11.2z"></path>
+                                </svg>
                             </div>
-                            <p className="modalPara">By proceeding, you agree to give CharmTunes access to the image you choose to upload. Please make sure you have the right to upload the image.</p>
-                        </form>
+                            <form onSubmit={this.handleSubmit} className="playlistForm">
+                                <label id="plformlabel" htmlFor="pltitle"></label>
+                                <input
+                                    id="pltitle"
+                                    className="plinput"
+                                    type='text'
+                                    placeholder='Playlist #1'//get user's playlist count and add # interpolate
+                                    value={this.state.title}
+                                    onChange={this.update('title')}
+                                    />
+                                <label id="plformlabel" htmlFor="pldescription"></label>
+                                <input
+                                    id="pldescription"
+                                    className="input"
+                                    type='description'
+                                    placeholder="Add a description"
+                                    value={this.state.description}
+                                    onChange={this.update('description')}
+                                    />
+                                <label id="plformlabel" htmlFor="plgenre"></label>
+                                <input
+                                    id="plgenre"
+                                    className="input"
+                                    type='genre'
+                                    placeholder="genre"
+                                    value={this.state.genre}
+                                    onChange={this.update('genre')}
+                                    />
+                                {/* upload artwork feature to be implemented here */}
+                                <div className="savebtn">
+                                    <button type='submit' className="savebutton">SAVE</button>
+                                </div>
+                                <p className="modalPara">By proceeding, you agree to give CharmTunes access to the image you choose to upload. Please make sure you have the right to upload the image.</p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

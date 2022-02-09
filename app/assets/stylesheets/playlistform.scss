@@ -1,6 +1,7 @@
 .playlistContainer {
     // margin-left: 300px;
-    padding-left: 300px;
+    padding-top: 25px;
+    padding-left: 250px;
     padding-bottom: 500px;
     margin-right: -15px;
     background-color: #363636;
@@ -18,6 +19,7 @@
 .plformartwork {
     height: 180px;
     width: 180px;
+    margin-left: 25px;
     align-items: center;
     background-color: #282828;
     color: #7f7f7f;
@@ -36,9 +38,12 @@
     color: white;
     font-size: 12px;
     font-weight: 700;
-    margin-top: 4px;
+    margin-left: 25px;
+    margin-top: 40px;
 }
 .pldetailstitle{
+    margin-top: 5px;
+    margin-left: 25px;
     font-size: 96px;
     line-height: 96px;
     font-weight: 900;
@@ -52,10 +57,14 @@
 //---------Modal under here------------------
 
 .firstModalDiv {
-    padding-left: 20px;
+    padding-left: 25px;
     padding-right: 20px;
     justify-content: space-between;
     display: flex;
+}
+.secondModalDiv {
+    // display: flex;
+    // justify-content: space-between;
 }
 .modalText {
     font-size: 1.5rem;
@@ -110,7 +119,32 @@
     bottom: 0;
     background-color: rgba($color: #000000, $alpha:0.6);
 }
-
+.plinput {
+    background: rgba(255,255,255,.1);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 12px;
+    width: 280px;
+}
+.plinput:focus{
+    outline: none;
+}
+.input {
+    background: rgba(255,255,255,.1);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    height: 80px;
+    padding: 8px 8px 28px;
+    resize: none;
+    width: 280px;
+}
 .savebutton {
     display: flex;
     align-items: center;
@@ -132,6 +166,7 @@
     transform: scale(1.06);
 }
 .modalPara {
+    margin-left: 30px;
     font-size: 0.6875rem;
     line-height: 1rem;
     text-transform: none;
