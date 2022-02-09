@@ -1,10 +1,23 @@
 .playlistContainer {
-    margin-left: 300px;
-    
+    // margin-left: 300px;
+    padding-left: 300px;
+    padding-bottom: 500px;
+    margin-right: -15px;
+    background-color: #363636;
 }
 .plartwork {
     height: 232px;
     width: 232px;
+    align-items: center;
+    background-color: #282828;
+    color: #7f7f7f;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 60px rgba(0,0,0,.5);
+}
+.plformartwork {
+    height: 180px;
+    width: 180px;
     align-items: center;
     background-color: #282828;
     color: #7f7f7f;
@@ -29,9 +42,11 @@
     line-height: 96px;
     font-weight: 900;
     width: 100%;
-    // color: white;
+    color: white;
     letter-spacing: -0.04em;
+    cursor: default;
 }
+
 
 //---------Modal under here------------------
 
@@ -39,10 +54,15 @@
     display: none; 
     position: fixed;
     z-index: 1;
+    height: 384px;
+    width: 524px;
+    background-color: #282828;
+    border-radius: 8px;
+    flex-direction: column;
     box-shadow: 0 4px 4px rgba(0,0,0,.3);
 }
 .playlistModalContent {
-    background-color: black;
+    // background-color: black;
     color: white;
 }
 .closeModal {
@@ -62,4 +82,31 @@
     height: 16px;
     width: 16px;
     float: right;
+}
+
+.savebutton {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    padding: 0 24px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.76px;
+    line-height: 18px;
+    border: 2px solid transparent;
+    border-radius: 500px;
+    transform: scale(1.00);
+}
+.savebutton:hover{
+    transform: scale(1.06);
+}
+.modalPara {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 700;
 }
