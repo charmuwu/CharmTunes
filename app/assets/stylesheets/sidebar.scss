@@ -20,6 +20,26 @@
     letter-spacing: normal;
     line-height: 16px;
     text-transform: none;
+    color: #afafaf;
+    text-decoration: none;
+}
+.sidebarnavs{
+    color: #afafaf;
+    font-weight: 700;
+    text-decoration: none;
+}
+.sidebarnavs:hover{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+.houseicon{
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px;
+    margin-right: 12px;
 }
 .sidebarcontainer .icon{
     padding: 0px;
@@ -27,7 +47,26 @@
     margin-top: 15px;
     // background: transparent;
 }
+
+.createplicon{
+    margin-right: 15px;
+    margin-top: 30px;
+    display:inline-block;
+    width:20px;
+    height:20px;
+
+    background:
+    linear-gradient(rgb(0, 0, 0) 0 0),
+    linear-gradient(rgb(0, 0, 0) 0 0),
+    rgb(202, 202, 202);
+    background-position:center;
+    background-size: 60% 2px,2px 60%; /*thickness = 2px, length = 50% (25px)*/
+    background-repeat:no-repeat;
+}
+
 .sidebarcreatepl{
+    margin-top: -15px;
+    
     color: #afafaf;
     font-weight: 700;
     text-decoration: none;
@@ -35,15 +74,25 @@
 .sidebarcreatepl:hover{
     color: white;
 }
-.sidebarcreatepl:visited {
-    color: #afafaf;
-}
 .sidebarplaylists {
+    display: flex;
+    color: #afafaf;
     font-weight: 500;
     letter-spacing: normal;
     line-height: 16px;
     text-decoration: none;
+    margin-bottom: 10px;
 }
-.sidebarplaylists:visited{
-    color: #afafaf;
+.sidebarplaylists:hover {
+    color: white;
+}
+
+
+.dividersidebarpl {
+    border-top: 1px solid #1b1b1b;
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    // margin-left: 15px;
+    // padding-right: 5px;
 }

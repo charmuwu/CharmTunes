@@ -36,39 +36,45 @@ class SidebarComponent extends React.Component{
             <div className="sidebarcontainer">
                 <div className="icon"></div>
 
-                <div className= "sbllinkcontainter">
-                    <Link className="sidebarLinks" 
-                    // className="sblhome" 
-                    to={'/'}>Home</Link>
+                <div className="sidebarnavs">
+                    <svg className="houseicon">
+                        <path fill="#afafaf" d="M9 14h6v7h5V7.8l-8-4.6-8 4.6V21h5v-7zm1 8H3V7.2L12 2l9 5.2V22h-7v-7h-4v7z"></path>
+                    </svg>
+                    <Link className="sidebarLinks" to={'/'}>Home</Link>
+                </div>
+                
+                <div className="sidebarnavs">
+                    <svg className="houseicon">
+                        <path fill="#afafaf" d="M14.617 3.893l-1.827.814 7.797 17.513 1.827-.813-7.797-17.514zM3 22h2V4H3v18zm5 0h2V4H8v18z"></path>
+                    </svg>
+                    <Link className="sidebarLinks">Your Library</Link>
                 </div>
 
-                <div className= "sbllinkcontainter">
-                    <div className="sidebarLinks">Your Library</div>
+                <Link className="sidebarnavs" to={'/playlist'}>
+                    <div className="createplicon"></div>
+                    Create Playlist
+                    {/* <div className="sidebarcreatepl" ></div> */}
+                </Link>
+            
+                <div className="dividersidebarpl">
+                    {/* to divide the playlists from the sidebar navs */}
                 </div>
-                <a className="sidebarcreatepl">
-                    <Link  to={'/playlist'}>Create Playlist</Link>
-                </a>
 
                 <div>
-                    {/* {playlists = this.props.getPlaylists()} */}
                     {playlists.map( playlistObj =>(
-                        <div className="sidebarplaylists">
-                            <Link  key={playlistObj.id} to={`/playlist/${playlistObj.id}`}>
+                        <Link  key={playlistObj.id}
+                            className="sidebarplaylists" 
+                            to={`/playlist/${playlistObj.id}`}>
                                 {playlistObj.title}
-                            </Link>
-                        </div>
+                        </Link>
                         
                     )) }
                 </div>
-                {/* get all the user's playlists and render them as components here. */}
-                {/* why doesn't this show up?  */}
+
             </div>
         )
         return(
             <div>
-                {console.log(this.props)}
-                {/* it's not showing currentUser in props... */}
-                {console.log(this.state)}
                 {this.props.currentUser ? ifLoggedIn() : ifLoggedOut()}
             </div>
         )
