@@ -35,19 +35,28 @@ class SidebarComponent extends React.Component{
             
             <div className="sidebarcontainer">
                 <div className="icon"></div>
+
                 <div className= "sbllinkcontainter">
-                    <Link className="sidebarLinks" className="sblhome" to={'/'}>Home</Link>
+                    <Link className="sidebarLinks" 
+                    // className="sblhome" 
+                    to={'/'}>Home</Link>
                 </div>
+
                 <div className= "sbllinkcontainter">
                     <div className="sidebarLinks">Your Library</div>
                 </div>
-                <Link className="sidebarcreatepl" to={'/playlist'}>Create Playlist</Link>
+                <a className="sidebarcreatepl">
+                    <Link  to={'/playlist'}>Create Playlist</Link>
+                </a>
+
                 <div>
                     {/* {playlists = this.props.getPlaylists()} */}
                     {playlists.map( playlistObj =>(
-                        <Link className="sidebarplaylists" key={playlistObj.id} to={`/playlist/${playlistObj.id}`}>
-                            {playlistObj.title}
-                        </Link>
+                        <div className="sidebarplaylists">
+                            <Link  key={playlistObj.id} to={`/playlist/${playlistObj.id}`}>
+                                {playlistObj.title}
+                            </Link>
+                        </div>
                         
                     )) }
                 </div>
