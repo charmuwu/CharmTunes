@@ -6,22 +6,31 @@ class SidebarComponent extends React.Component{
         super(props);
         this.state = {
             currentUser: '',
-            playlistId: 5,
-            // dummyPlaylist ={title:''},
+            currentPlaylist: {},
+            // playlistCount: this.props.playlists,
+            // dummyPlaylist ={title:'',description: '',genre:'',artwork:'',},
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.onPlaylistClick = this.onPlaylistClick.bind(this)
     }
     componentDidMount(){
         this.props.getPlaylists();
     }
     handleSubmit(e) {
+        // on click, create a default data playlist. then send it over to playlist form to be updated.
         e.preventDefault();
-        let dummyplaylist = {title: 'test playlist', 
+        let dummyPlaylist = {title: 'test playlist', 
                         description: 'test description', 
                         genre: 'test genre', 
                         artwork: ''};
-        this.props.createPlaylist(dummyplaylist)
+        this.props.createPlaylist(dummyPlaylist)
         .then(() => this.props.history.push("/"));
+    }
+    onPlaylistClick(playlistObj) {
+        // upon clicking a playlist, send that playlist to the playlistform component to be updated.
+        // let currentPlaylist = document.getElementById(`playlistId${}`)
+        // let playlistId = 7;
+        this.setState({currentPlaylist: playlistObj});
     }
     render(){
         const {pathname} = this.props.location;
@@ -55,6 +64,7 @@ class SidebarComponent extends React.Component{
                 </div>
 
                 <Link className="sidebarnavs" to={'/playlist'}>
+                    {/* onClick event to send prop to playlistform for update */}
                     <div className="createplicon"></div>
                     Create Playlist
 
@@ -68,7 +78,8 @@ class SidebarComponent extends React.Component{
         )
         let playlists;
         if(this.props.playlists){
-            playlists = Object.values(this.props.playlists)
+            playlists = Object.values(this.props.playlists);
+            // console.log(playlists.keys());
         }
         const ifLoggedIn = () => (
             
@@ -106,11 +117,14 @@ class SidebarComponent extends React.Component{
                     {/* to divide the playlists from the sidebar navs */}
                 </div>
 
-                <div>
+                <div> {/* this displays all the playlists on the sidebar */}
                     {playlists.map( playlistObj =>(
                         <Link  key={playlistObj.id}
+                            id={`playlistId${playlistObj.id}`}
                             className="sidebarplaylists" 
-                            to={`/playlist/${playlistObj.id}`}>
+                            to={`/playlist/${playlistObj.id}`}
+                            // onClick={this.onPlaylistClick(playlistObj)}
+                            >
                                 {playlistObj.title}
                         </Link>    
                     )) }

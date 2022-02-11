@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { RECEIVE_CURRENT_USER } from '../../actions/session_actions';
 
 class PlaylistForm extends React.Component {
     constructor(props) {
@@ -10,21 +9,35 @@ class PlaylistForm extends React.Component {
             description: '',
             genre: '',
             artwork: '',
-            playlistId: 5,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
         this.handlePLClickOpen = this.handlePLClickOpen.bind(this);
         this.handlePLClickClose = this.handlePLClickClose.bind(this);
     }
     componentDidMount(){
         this.props.getPlaylists();
-        this.props.getPlaylist(this.state.playlistId);
+        if(this.props.playlists){
+           let playlists = Object.values(this.props.playlists);
+        }
+        if(this.props.currentPlaylist){
+            this.setState({title: playlistObj.title, 
+                description: playlistObj.description, 
+                genre: playlistObj.genre,
+                artwork: playlistObj.artwork});
+        }
+        // this.props.getPlaylist(this.state.playlistId);
         // where/how do we get the id?
     }
     
     handleSubmit(e) {
         e.preventDefault();
         this.props.createPlaylist(this.state)
+        .then(() => this.props.history.push("/"));
+    }
+    handleUpdateSubmit(e) {
+        e.preventDefault();
+        this.props.updatePlaylist(this.state, this.props.currentPlaylistId)
         .then(() => this.props.history.push("/"));
     }
     handlePLClickOpen(){
@@ -47,7 +60,7 @@ class PlaylistForm extends React.Component {
         // add in playsong query here    
         return (
             <div className="playlistContainer">
-
+                <div className={this.props.currentPlaylistId}></div>
                 <div className="plinfobar">
                     <div className="plartwork" onClick={this.handlePLClickOpen}>
                         <svg className="playlistartwork">
