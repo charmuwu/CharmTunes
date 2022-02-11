@@ -7,10 +7,21 @@ class SidebarComponent extends React.Component{
         this.state = {
             currentUser: '',
             playlistId: 5,
+            // dummyPlaylist ={title:''},
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount(){
         this.props.getPlaylists();
+    }
+    handleSubmit(e) {
+        e.preventDefault();
+        let dummyplaylist = {title: 'test playlist', 
+                        description: 'test description', 
+                        genre: 'test genre', 
+                        artwork: ''};
+        this.props.createPlaylist(dummyplaylist)
+        .then(() => this.props.history.push("/"));
     }
     render(){
         const {pathname} = this.props.location;
@@ -46,6 +57,7 @@ class SidebarComponent extends React.Component{
                 <Link className="sidebarnavs" to={'/playlist'}>
                     <div className="createplicon"></div>
                     Create Playlist
+
                 </Link>
 
                 <div className="dividersidebarpl">
@@ -85,7 +97,7 @@ class SidebarComponent extends React.Component{
                     {/* to divide */}
                 </div>
                 
-                <Link className="sidebarnavs" to={'/playlist'}>
+                <Link className="sidebarnavs" to={'/playlist/'} onClick={this.handleSubmit}>
                     <div className="createplicon"></div>
                     Create Playlist
                 </Link>

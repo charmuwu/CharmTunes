@@ -9,7 +9,8 @@ class PlaylistForm extends React.Component {
             title: 'My Playlist',
             description: '',
             genre: '',
-            artwork: ''
+            artwork: '',
+            playlistId: 5,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePLClickOpen = this.handlePLClickOpen.bind(this);
@@ -17,9 +18,10 @@ class PlaylistForm extends React.Component {
     }
     componentDidMount(){
         this.props.getPlaylists();
-        // this.props.getPlaylist(playlistId);
+        this.props.getPlaylist(this.state.playlistId);
         // where/how do we get the id?
     }
+    
     handleSubmit(e) {
         e.preventDefault();
         this.props.createPlaylist(this.state)

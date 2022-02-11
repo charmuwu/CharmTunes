@@ -17,6 +17,7 @@ export const postPlaylist = playlist => {
         data: { playlist },
     })
 }
+// going to need a patchPlaylist
 export const deletePlaylist = () => {
     return $.ajax({
         method: 'DELETE',

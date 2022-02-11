@@ -16,21 +16,6 @@
     justify-content: center;
     box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
-.plformartwork {
-    height: 180px;
-    width: 180px;
-    margin-left: 25px;
-    align-items: center;
-    background-color: #282828;
-    color: #7f7f7f;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 4px 60px rgba(0,0,0,.5);
-}
-.playlistartwork {
-    height: 81px;
-    width: 81px;
-}
 .plinfobar {
     display:flex;
 }
@@ -54,7 +39,7 @@
 }
 
 
-//---------Modal under here------------------
+//------------Modal under here------------------
 
 .firstModalDiv {
     padding-left: 25px;
@@ -63,8 +48,8 @@
     display: flex;
 }
 .secondModalDiv {
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .modalText {
     font-size: 1.5rem;
@@ -118,6 +103,23 @@
     right: 0;
     bottom: 0;
     background-color: rgba($color: #000000, $alpha:0.6);
+}
+.plformartwork {
+    height: 80px;
+    width: 180px;
+    margin-left: 25px;
+    margin-right: 15px;
+    // align-items: center;
+    background-color: #282828;
+    color: #7f7f7f;
+    padding: 10%;
+    // display: flex;
+    // justify-content: center;
+    box-shadow: 0 4px 60px rgba(0,0,0,.5);
+}
+.playlistartwork {
+    height: 81px;
+    width: 81px;
 }
 .plinput {
     background: rgba(255,255,255,.1);

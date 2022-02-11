@@ -8,7 +8,7 @@ import musicReducer from './music_reducer';
 export default combineReducers({
     entities: entitiesReducer,
     session: sessionReducer,
-    playlists: playlistReducer,
-    songs: musicReducer,
+    playlists: playlistReducer, //uh refactor frontend components to pull from entities or some thing
+    songs: musicReducer, // same as whatever that says ^
     errors: errorsReducer
 })
