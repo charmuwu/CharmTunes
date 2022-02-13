@@ -11,7 +11,11 @@ export const receiveErrors = (errors) => ({
     type: RECEIVE_ERRORS,
     errors,
 });
-//getPlaysong(s) what else should i add in?
+export const receiveCurrentPlaylist = (currentPlaylist) => ({
+    type: RECEIVE_CURRENT_PLAYLIST,
+    currentPlaylist,
+});
+
 //I need songs in a specific playlistId
 
 export const getPlaysongs = playlistId => dispatch => fetchPlaysongs(playlistId)

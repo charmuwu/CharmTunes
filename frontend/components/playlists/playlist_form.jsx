@@ -12,24 +12,27 @@ class PlaylistForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
-        this.handlePLClickOpen = this.handlePLClickOpen.bind(this);
         this.handlePLClickClose = this.handlePLClickClose.bind(this);
     }
+    handlePLClickClose(){
+        const modal = document.getElementById("playlistModal");
+        const modalbg = document.getElementById("modalBG");
+        modal.style.display = "none";
+        modalbg.style.display = "none";
+    }
     componentDidMount(){
-        this.props.getPlaylists();
-        if(this.props.playlists){
-           let playlists = Object.values(this.props.playlists);
-        }
-        if(this.props.currentPlaylist){
-            this.setState({title: playlistObj.title, 
-                description: playlistObj.description, 
-                genre: playlistObj.genre,
-                artwork: playlistObj.artwork});
-        }
+        // console.log(this.props)
+        // let currentPlaylist = this.props.getPlaylist(this.props.currentPlaylist);
+        // if(currentPlaylist){
+        //     this.setState({title: currentPlaylist.title, 
+        //         description: currentPlaylist.description, 
+        //         genre: currentPlaylist.genre,
+        //         artwork: currentPlaylist.artwork});
+        // }
+        // debugger
         // this.props.getPlaylist(this.state.playlistId);
         // where/how do we get the id?
     }
-    
     handleSubmit(e) {
         e.preventDefault();
         this.props.createPlaylist(this.state)
@@ -40,18 +43,6 @@ class PlaylistForm extends React.Component {
         this.props.updatePlaylist(this.state, this.props.currentPlaylistId)
         .then(() => this.props.history.push("/"));
     }
-    handlePLClickOpen(){
-        const modal = document.getElementById("playlistModal");
-        const modalbg = document.getElementById("modalBG");
-        modal.style.display = "block";
-        modalbg.style.display = "block";
-    }
-    handlePLClickClose(){
-        const modal = document.getElementById("playlistModal");
-        const modalbg = document.getElementById("modalBG");
-        modal.style.display = "none";
-        modalbg.style.display = "none";
-    }
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
@@ -59,49 +50,8 @@ class PlaylistForm extends React.Component {
         //get array of playlists and length of array
         // add in playsong query here    
         return (
-            <div className="playlistContainer">
-                <div className={this.props.currentPlaylistId}></div>
-                <div className="plinfobar">
-                    <div className="plartwork" onClick={this.handlePLClickOpen}>
-                        <svg className="playlistartwork">
-                            {/* <path d="M33.402 3.006L8.852 31.751l-2.337 12.61 12.09-4.281 24.552-28.746-9.755-8.328zM9.112 41.32l1.543-8.327 6.44 5.5-7.983 2.827zm9.418-4.231l-6.712-5.732L33.625 5.825l6.711 5.731L18.53 37.089z"></path> */}
-                            <path fill="#afafaf" d="M25.6 11.565v45.38c-2.643-3.27-6.68-5.37-11.2-5.37-7.94 0-14.4 6.46-14.4 14.4s6.46 14.4 14.4 14.4 14.4-6.46 14.4-14.4v-51.82l48-10.205V47.2c-2.642-3.27-6.678-5.37-11.2-5.37-7.94 0-14.4 6.46-14.4 14.4s6.46 14.4 14.4 14.4S80 64.17 80 56.23V0L25.6 11.565zm-11.2 65.61c-6.176 0-11.2-5.025-11.2-11.2 0-6.177 5.024-11.2 11.2-11.2 6.176 0 11.2 5.023 11.2 11.2 0 6.174-5.026 11.2-11.2 11.2zm51.2-9.745c-6.176 0-11.2-5.024-11.2-11.2 0-6.174 5.024-11.2 11.2-11.2 6.176 0 11.2 5.026 11.2 11.2 0 6.178-5.026 11.2-11.2 11.2z"></path>
-                        </svg>
-                        {/* this.state.artwork inside image tag or something */}
-                    </div>
-                    <div className="pldetails">
-                        <div className="pldetail1">
-                            PLAYLIST
-                        </div>
-                        <div className="pldetailstitle" onClick={this.handlePLClickOpen}>
-                            {this.state.title}
-                        </div>
-                        <div className="description">
-                            {this.state.description}
-                        </div>
-                        <div className="pldetailscreator">
-                            <div className="pldcreatorname">
-                                {/* get name of the user here */}
-                                {/* {console.log(RECEIVE_CURRENT_USER)} */}
-                            </div>
-                            <div className="pldnumberofsongs">
-                                {/* playlist song length 
-                                get the list of songs using playsong action
-                                */}
-                            </div>
-                            <div className="pldtotallength">
-                                {/* total length of all songs together */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    add song
-                    {/* add song button instead for now */}
-                </div>
-                
-                {/* everything below should be in a modal form */}
+            <div>
+            {/* everything below should be in a modal form */}
                 <div id ="modalBG" className="modalBG" onClick={this.handlePLClickClose}></div>
                 <div id="playlistModal" className="playlistModalyay">
                     <div className="playlistModalContent">
@@ -152,11 +102,11 @@ class PlaylistForm extends React.Component {
                                     />
                                 {/* upload artwork feature to be implemented here */}
                                 <div className="savebtn">
-                                    <button type='submit' className="savebutton">SAVE</button>
+                                    <button type='submit' className="savebutton" onClick={this.handlePLClickClose}>SAVE</button>
                                 </div>
-                                <p className="modalPara">By proceeding, you agree to give CharmTunes access to the image you choose to upload. Please make sure you have the right to upload the image.</p>
                             </form>
                         </div>
+                        <p className="modalPara">By proceeding, you agree to give CharmTunes access to the image you choose to upload. Please make sure you have the right to upload the image.</p>
                     </div>
                 </div>
             </div>

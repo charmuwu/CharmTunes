@@ -6,7 +6,7 @@ class SidebarComponent extends React.Component{
         super(props);
         this.state = {
             currentUser: '',
-            currentPlaylist: {},
+            // currentPlaylistId: '',
             // playlistCount: this.props.playlists,
             // dummyPlaylist ={title:'',description: '',genre:'',artwork:'',},
         };
@@ -19,6 +19,7 @@ class SidebarComponent extends React.Component{
     handleSubmit(e) {
         // on click, create a default data playlist. then send it over to playlist form to be updated.
         e.preventDefault();
+        // let currentPlaylist = e.currentTarget.currentPlaylist;
         let dummyPlaylist = {title: 'test playlist', 
                         description: 'test description', 
                         genre: 'test genre', 
@@ -26,11 +27,13 @@ class SidebarComponent extends React.Component{
         this.props.createPlaylist(dummyPlaylist)
         .then(() => this.props.history.push("/"));
     }
-    onPlaylistClick(playlistObj) {
+    onPlaylistClick(e) {
         // upon clicking a playlist, send that playlist to the playlistform component to be updated.
         // let currentPlaylist = document.getElementById(`playlistId${}`)
-        // let playlistId = 7;
-        this.setState({currentPlaylist: playlistObj});
+        let playlistId = e.currentTarget.id;
+        // this.props.receiveCurrentPlaylist()
+        // let playlistElement = e.currentTarget;
+        this.props.receiveCurrentPlaylist({currentPlaylistId: playlistId});
     }
     render(){
         const {pathname} = this.props.location;
@@ -120,10 +123,10 @@ class SidebarComponent extends React.Component{
                 <div> {/* this displays all the playlists on the sidebar */}
                     {playlists.map( playlistObj =>(
                         <Link  key={playlistObj.id}
-                            id={`playlistId${playlistObj.id}`}
+                            id={playlistObj.id}
                             className="sidebarplaylists" 
                             to={`/playlist/${playlistObj.id}`}
-                            // onClick={this.onPlaylistClick(playlistObj)}
+                            onClick={this.onPlaylistClick}
                             >
                                 {playlistObj.title}
                         </Link>    

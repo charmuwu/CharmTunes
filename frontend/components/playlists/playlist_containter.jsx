@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import PlaylistForm from './playlist_form';
+import PlaylistShow from './playlist_show';
 import {getCurrentUser} from '../../actions/session_actions';
 import {getPlaysongs, getPlaylist, getPlaylists, newPlaylist, noMorePlaylist, updatePlaylist} from '../../actions/playlist_actions';
 
@@ -8,6 +9,7 @@ const mSTP = state => {
         playlists: state.playlists,
         user: state.users,
         errors: state.errors.session,
+        currentPlaylist: state.entities.currentPlaylist,
     }
 };
 const mDTP = dispatch => {
@@ -20,4 +22,8 @@ const mDTP = dispatch => {
         fetchPlaysongs: playsongs => dispatch(getPlaysongs(playsongs)),
     }
 };
-export default connect(mSTP, mDTP)(PlaylistForm);
+// export default connect(mSTP, mDTP)(PlaylistShow);
+export default {
+    PlaylistShow: connect(mSTP, mDTP)(PlaylistShow),
+    PlaylistForm: connect(mSTP, mDTP)(PlaylistForm)
+};
