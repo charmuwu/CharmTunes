@@ -2,15 +2,15 @@ class Api::PlaylistsController < ApplicationController
     def index
         @playlists = Playlist.where(creator_id: current_user.id)
         render :index
-        
     end
     def show
-        @playlist = Playlist.find_by(id: params[:id])
-        playsongs = Playsong.where(playlist_id: @playlist.id)
-        @songs = Song.where(song_id: playsongs.song_id)
-        @songs = playsongs.each  do |song_id|
-            # .include to avoid n+1 query
-        end
+        @playlist = Playlist.find_by(params[:id])
+
+        # playsongs = Playsong.where(playlist_id: @playlist.id)
+        # @songs = Song.where(song_id: playsongs.song_id)
+        # @songs = playsongs.each  do |song_id|
+        #     # .include to avoid n+1 query
+        # end
         render :show
     end
     def create 
@@ -41,7 +41,7 @@ class Api::PlaylistsController < ApplicationController
         @playlist = Playlist.find_by(id: params[:id])
         if current_user.id == @playlist.creator_id
             @playlist.delete
-            render :index
+            render :show
         else
             render json: @playlist.errors.full_messages, status: "422"
             #render remove playlist from library

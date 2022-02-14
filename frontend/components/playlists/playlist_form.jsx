@@ -29,7 +29,6 @@ class PlaylistForm extends React.Component {
         //         genre: currentPlaylist.genre,
         //         artwork: currentPlaylist.artwork});
         // }
-        // debugger
         // this.props.getPlaylist(this.state.playlistId);
         // where/how do we get the id?
     }
@@ -85,7 +84,7 @@ class PlaylistForm extends React.Component {
                                 <label id="plformlabel" htmlFor="pldescription"></label>
                                 <input
                                     id="pldescription"
-                                    className="input"
+                                    className="playlistInput"
                                     type='description'
                                     placeholder="Add a description"
                                     value={this.state.description}
@@ -94,7 +93,7 @@ class PlaylistForm extends React.Component {
                                 <label id="plformlabel" htmlFor="plgenre"></label>
                                 <input
                                     id="plgenre"
-                                    className="input"
+                                    className="playlistInput"
                                     type='genre'
                                     placeholder="genre"
                                     value={this.state.genre}

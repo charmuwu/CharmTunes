@@ -6,7 +6,7 @@ class SidebarComponent extends React.Component{
         super(props);
         this.state = {
             currentUser: '',
-            // currentPlaylistId: '',
+            currentPlaylistId: '',
             // playlistCount: this.props.playlists,
             // dummyPlaylist ={title:'',description: '',genre:'',artwork:'',},
         };
@@ -15,6 +15,7 @@ class SidebarComponent extends React.Component{
     }
     componentDidMount(){
         this.props.getPlaylists();
+        this.props.getPlaylist(7);
     }
     handleSubmit(e) {
         // on click, create a default data playlist. then send it over to playlist form to be updated.
@@ -29,11 +30,12 @@ class SidebarComponent extends React.Component{
     }
     onPlaylistClick(e) {
         // upon clicking a playlist, send that playlist to the playlistform component to be updated.
+
         // let currentPlaylist = document.getElementById(`playlistId${}`)
         let playlistId = e.currentTarget.id;
-        // this.props.receiveCurrentPlaylist()
+        this.props.receiveCurrentPlaylist()
         // let playlistElement = e.currentTarget;
-        this.props.receiveCurrentPlaylist({currentPlaylistId: playlistId});
+        this.setState({currentPlaylistId: playlistId});
     }
     render(){
         const {pathname} = this.props.location;
@@ -66,7 +68,7 @@ class SidebarComponent extends React.Component{
                     {/* to divide */}
                 </div>
 
-                <Link className="sidebarnavs" to={'/playlist'}>
+                <Link className="sidebarnavs" to={`/playlist`}> {/* /playlist/${id} how are we going to do this? */}
                     {/* onClick event to send prop to playlistform for update */}
                     <div className="createplicon"></div>
                     Create Playlist

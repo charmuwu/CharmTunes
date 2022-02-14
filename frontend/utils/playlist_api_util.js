@@ -24,9 +24,9 @@ export const patchPlaylist = (playlist, id) => {
         data: { playlist },
     })
 }
-export const deletePlaylist = () => {
+export const deletePlaylist = (id) => {
     return $.ajax({
         method: 'DELETE',
-        url: '/api/playlists',
+        url: `/api/playlists/${id}`,
     })
 }
