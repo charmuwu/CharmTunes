@@ -21,16 +21,13 @@ class PlaylistForm extends React.Component {
         modalbg.style.display = "none";
     }
     componentDidMount(){
-        // console.log(this.props)
-        // let currentPlaylist = this.props.getPlaylist(this.props.currentPlaylist);
-        // if(currentPlaylist){
-        //     this.setState({title: currentPlaylist.title, 
-        //         description: currentPlaylist.description, 
-        //         genre: currentPlaylist.genre,
-        //         artwork: currentPlaylist.artwork});
-        // }
-        // this.props.getPlaylist(this.state.playlistId);
-        // where/how do we get the id?
+        let id = Number.parseInt(this.props.match.params.playlistObjId);
+
+        this.props.getPlaylist(id).then((data) => 
+        this.setState({title: data.playlist.title, 
+            description: data.playlist.description, 
+            genre: data.playlist.genre,
+            artwork: data.playlist.artwork}));
     }
     handleSubmit(e) {
         e.preventDefault();

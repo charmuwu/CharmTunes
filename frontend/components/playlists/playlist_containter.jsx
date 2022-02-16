@@ -9,7 +9,7 @@ const mSTP = state => {
         playlists: state.playlists,
         user: state.users,
         errors: state.errors.session,
-        currentPlaylistId: state.entities.currentPlaylistId,
+        playlist: state.playlist,
     }
 };
 const mDTP = dispatch => {

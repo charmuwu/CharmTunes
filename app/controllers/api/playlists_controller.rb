@@ -4,7 +4,7 @@ class Api::PlaylistsController < ApplicationController
         render :index
     end
     def show
-        @playlist = Playlist.find_by(params[:id])
+        @playlist = Playlist.find_by(id: params[:id])
 
         # playsongs = Playsong.where(playlist_id: @playlist.id)
         # @songs = Song.where(song_id: playsongs.song_id)

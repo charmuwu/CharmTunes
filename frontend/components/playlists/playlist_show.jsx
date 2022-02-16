@@ -9,6 +9,7 @@ class PlaylistShow extends React.Component {
             description: '',
             genre: '',
             artwork: '',
+            creator: '',
         };
         this.handlePLClickOpen = this.handlePLClickOpen.bind(this);
     }
@@ -20,17 +21,24 @@ class PlaylistShow extends React.Component {
         modalbg.style.display = "block";
     }
     componentDidMount(){
+        let id = Number.parseInt(this.props.match.params.playlistObjId);
         
-        // console.log(this.props)
-        // console.log(this.props.currentPlaylistId)
-        // this.props.getPlaylist(this.props.currentPlaylistId)
-        this.props.getPlaylist(7);
-        // debugger
-        let playlistInfo = this.props.getPlaylist(this.props.currentPlaylistId)
-        this.setState({title: playlistInfo.title, 
-                    description: playlistInfo.description, 
-                    genre: playlistInfo.genre,
-                    artwork: playlistInfo.artwork});
+        this.props.getPlaylist(id).then((data) => 
+        this.setState({title: data.playlist.title, 
+            description: data.playlist.description, 
+            genre: data.playlist.genre,
+            artwork: data.playlist.artwork}));
+    }
+    componentDidUpdate(prevProps){
+        if (prevProps.match.params.playlistObjId !== this.props.match.params.playlistObjId) {
+            let id = Number.parseInt(this.props.match.params.playlistObjId);
+
+            this.props.getPlaylist(id).then((data) => 
+            this.setState({title: data.playlist.title, 
+                description: data.playlist.description, 
+                genre: data.playlist.genre,
+                artwork: data.playlist.artwork}));
+        }
     }
     render() {
 
@@ -57,6 +65,7 @@ class PlaylistShow extends React.Component {
                         </div>
                         <div className="pldetailscreator">
                             <div className="pldcreatorname">
+                                {this.state.creator}
                                 {/* get name of the user here */}
                                 {/* {console.log(RECEIVE_CURRENT_USER)} */}
                             </div>
