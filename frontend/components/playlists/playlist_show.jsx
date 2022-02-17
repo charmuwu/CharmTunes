@@ -28,6 +28,8 @@ class PlaylistShow extends React.Component {
             description: data.playlist.description, 
             genre: data.playlist.genre,
             artwork: data.playlist.artwork}));
+            // during promise, getUser(id) get the ID from playlist creator id
+            // or during another promise?
     }
     componentDidUpdate(prevProps){
         if (prevProps.match.params.playlistObjId !== this.props.match.params.playlistObjId) {
@@ -38,6 +40,7 @@ class PlaylistShow extends React.Component {
                 description: data.playlist.description, 
                 genre: data.playlist.genre,
                 artwork: data.playlist.artwork}));
+                // during promise, getUser(id) get the ID from playlist creator id
         }
     }
     render() {
