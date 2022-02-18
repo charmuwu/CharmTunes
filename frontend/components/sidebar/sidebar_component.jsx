@@ -19,7 +19,7 @@ class SidebarComponent extends React.Component{
     handleSubmit(e) {
         // on click, create a default data playlist. then send it over to playlist form to be updated.
         e.preventDefault();
-        // let currentPlaylist = e.currentTarget.currentPlaylist;
+
         let dummyPlaylist = {title: 'test playlist', 
                         description: 'test description', 
                         genre: 'test genre', 
@@ -30,10 +30,7 @@ class SidebarComponent extends React.Component{
     onPlaylistClick(e) {
         // upon clicking a playlist, send that playlist to the playlistform component to be updated.
 
-        // let currentPlaylist = document.getElementById(`playlistId${}`)
         let playlistId = e.currentTarget.id;
-        this.props.receiveCurrentPlaylist()
-        // let playlistElement = e.currentTarget;
         this.setState({currentPlaylistId: playlistId});
     }
     render(){
