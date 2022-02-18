@@ -13,10 +13,7 @@ export const receiveErrors = (errors) => ({
     type: RECEIVE_ERRORS,
     errors,
 });
-export const receiveCurrentPlaylist = (currentPlaylist) => ({
-    type: RECEIVE_CURRENT_PLAYLIST,
-    currentPlaylist,
-});
+
 
 //I need songs in a specific playlistId
 
