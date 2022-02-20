@@ -8,12 +8,14 @@ class SidebarComponent extends React.Component{
             currentUser: '',
             currentPlaylistId: '',
             // playlistCount: this.props.playlists,
-            // dummyPlaylist ={title:'',description: '',genre:'',artwork:'',},
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onPlaylistClick = this.onPlaylistClick.bind(this)
     }
     componentDidMount(){
+        this.props.getPlaylists();
+    }
+    componentDidUpdate(){
         this.props.getPlaylists();
     }
     handleSubmit(e) {
@@ -29,7 +31,6 @@ class SidebarComponent extends React.Component{
     }
     onPlaylistClick(e) {
         // upon clicking a playlist, send that playlist to the playlistform component to be updated.
-
         let playlistId = e.currentTarget.id;
         this.setState({currentPlaylistId: playlistId});
     }
@@ -64,8 +65,8 @@ class SidebarComponent extends React.Component{
                     {/* to divide */}
                 </div>
 
-                <Link className="sidebarnavs" to={`/playlist`}> {/* /playlist/${id} how are we going to do this? */}
-                    {/* onClick event to send prop to playlistform for update */}
+                <Link className="sidebarnavs" to={`/playlist`}> 
+                    {/* /playlist/${id} how are we going to do this? */}
                     <div className="createplicon"></div>
                     Create Playlist
 
@@ -110,6 +111,7 @@ class SidebarComponent extends React.Component{
                 </div>
                 
                 <Link className="sidebarnavs" to={'/playlist/'} onClick={this.handleSubmit}>
+                    {/* /playlist/${id} how are we going to do this? */}
                     <div className="createplicon"></div>
                     Create Playlist
                 </Link>
