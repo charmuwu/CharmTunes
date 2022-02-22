@@ -37,6 +37,31 @@
     letter-spacing: -0.04em;
     cursor: default;
 }
+.description {
+    color: rgb(151, 151, 151);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: none;
+    letter-spacing: normal;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.pldcreatorname {
+    color: white;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    border: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 0;
+}
+.pldcreatorname:hover {
+    text-decoration: underline;
+}
 
 
 //------------Modal under here------------------
@@ -129,8 +154,9 @@
     font-family: inherit;
     font-size: 14px;
     height: 40px;
-    padding: 0 12px;
-    width: 280px;
+    padding: 0 8px;
+    width: 260px;
+    margin-bottom: 20px;
 }
 .plinput:focus{
     outline: none;
@@ -145,7 +171,10 @@
     height: 80px;
     padding: 8px 8px 28px;
     resize: none;
-    width: 280px;
+    width: 260px;
+}
+.playlistInput:focus {
+    outline: none;
 }
 .savebutton {
     display: flex;
@@ -163,15 +192,21 @@
     border: 2px solid transparent;
     border-radius: 500px;
     transform: scale(1.00);
+    right: 10px;
+    position: absolute;
+    margin-top: 10px;
 }
 .savebutton:hover{
     transform: scale(1.06);
 }
 .modalPara {
     margin-left: 30px;
+    margin-right: 30px;
     font-size: 0.6875rem;
     line-height: 1rem;
     text-transform: none;
     letter-spacing: normal;
     font-weight: 700;
+    position: absolute;
+    bottom: 0px;
 }

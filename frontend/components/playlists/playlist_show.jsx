@@ -72,8 +72,6 @@ class PlaylistShow extends React.Component {
                         <div className="pldetailscreator">
                             <div className="pldcreatorname">
                                 {this.state.creator}
-                                {/* get name of the user here */}
-                                {/* {console.log(this.props)} */}
                             </div>
                             <div className="pldnumberofsongs">
                                 {/* playlist song length 

@@ -98,7 +98,7 @@ class PlaylistForm extends React.Component {
                                     value={this.state.description}
                                     onChange={this.update('description')}
                                     />
-                                <label id="plformlabel" htmlFor="plgenre"></label>
+                                {/* <label id="plformlabel" htmlFor="plgenre"></label>
                                 <input
                                     id="plgenre"
                                     className="playlistInput"
@@ -106,7 +106,7 @@ class PlaylistForm extends React.Component {
                                     placeholder="genre"
                                     value={this.state.genre}
                                     onChange={this.update('genre')}
-                                    />
+                                    /> */}
                                 {/* upload artwork feature to be implemented here */}
                                 <div className="savebtn">
                                     <button type='submit' className="savebutton" onClick={this.handlePLClickClose}>SAVE</button>
