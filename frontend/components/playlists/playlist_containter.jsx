@@ -8,6 +8,7 @@ const mSTP = state => {
     return{
         playlists: state.playlists,
         user: state.users,
+        // username: state.entities.users[playlists.creator_id].username,
         errors: state.errors.session,
         playlist: state.playlist,
     }
@@ -20,6 +21,8 @@ const mDTP = dispatch => {
         getPlaylists: () => dispatch(getPlaylists()),
         deletePlaylist: playlist => dispatch(noMorePlaylist(playlist)),
         fetchPlaysongs: playsongs => dispatch(getPlaysongs(playsongs)),
+        
+        getUser: userId => dispatch(getCurrentUser(userId)),
     }
 };
 // export default connect(mSTP, mDTP)(PlaylistShow);

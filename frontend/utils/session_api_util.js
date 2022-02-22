@@ -5,6 +5,12 @@ export const postUser = user => {//signup
         data: { user },
     })
 }
+export const getUser = userId => {//get user
+    return $.ajax({
+        method: 'GET',
+        url: `/api/users/${userId}`,
+    })
+}
 
 export const postSession = (user) => {//login
     return $.ajax({
@@ -20,3 +26,4 @@ export const deleteSession = () => { //logout
         url: '/api/session',
     })
 }
+

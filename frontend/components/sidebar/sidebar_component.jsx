@@ -15,8 +15,11 @@ class SidebarComponent extends React.Component{
     componentDidMount(){
         this.props.getPlaylists();
     }
-    componentDidUpdate(){
-        this.props.getPlaylists();
+    componentDidUpdate(prevProps){
+        // if(prevProps.entities.users !== this.props.entities.users){
+        //     console.log(prevProps);
+        //     this.props.getPlaylists();
+        // }
     }
     handleSubmit(e) {
         // on click, create a default data playlist. then send it over to playlist form to be updated.

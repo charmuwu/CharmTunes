@@ -29,6 +29,17 @@ class PlaylistForm extends React.Component {
             genre: data.playlist.genre,
             artwork: data.playlist.artwork}));
     }
+    componentDidUpdate(prevProps){
+        if(prevProps.match.params.playlistObjId !== this.props.match.params.playlistObjId){
+            let id = Number.parseInt(this.props.match.params.playlistObjId);
+
+            this.props.getPlaylist(id).then((data) => 
+            this.setState({title: data.playlist.title, 
+                description: data.playlist.description, 
+                genre: data.playlist.genre,
+                artwork: data.playlist.artwork}));
+        }
+    }
     handleSubmit(e) {
         e.preventDefault();
         this.props.createPlaylist(this.state)

@@ -22,25 +22,28 @@ class PlaylistShow extends React.Component {
     }
     componentDidMount(){
         let id = Number.parseInt(this.props.match.params.playlistObjId);
-        
-        this.props.getPlaylist(id).then((data) => 
+       
+        this.props.getPlaylist(id).then((data) =>
+        this.props.getUser(data.playlist.creator_id).then ((userData) =>
         this.setState({title: data.playlist.title, 
             description: data.playlist.description, 
             genre: data.playlist.genre,
-            artwork: data.playlist.artwork}));
-            // during promise, getUser(id) get the ID from playlist creator id
-            // or during another promise?
+            artwork: data.playlist.artwork,
+            creator: userData.user.username,
+        })));
     }
     componentDidUpdate(prevProps){
         if (prevProps.match.params.playlistObjId !== this.props.match.params.playlistObjId) {
             let id = Number.parseInt(this.props.match.params.playlistObjId);
 
             this.props.getPlaylist(id).then((data) => 
+            this.props.getUser(data.playlist.creator_id).then ((userData) =>
             this.setState({title: data.playlist.title, 
                 description: data.playlist.description, 
                 genre: data.playlist.genre,
-                artwork: data.playlist.artwork}));
-                // during promise, getUser(id) get the ID from playlist creator id
+                artwork: data.playlist.artwork,
+                creator: userData.user.username,
+            })));
         }
     }
     render() {
@@ -70,7 +73,7 @@ class PlaylistShow extends React.Component {
                             <div className="pldcreatorname">
                                 {this.state.creator}
                                 {/* get name of the user here */}
-                                {/* {console.log(RECEIVE_CURRENT_USER)} */}
+                                {/* {console.log(this.props)} */}
                             </div>
                             <div className="pldnumberofsongs">
                                 {/* playlist song length 
