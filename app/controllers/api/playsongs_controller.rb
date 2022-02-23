@@ -16,7 +16,7 @@ class Api::PlaylistsSongsController < ApplicationController
             # song_id:  @song.id
         )
         if @playlist_song.save
-            render json: @playlist_song, :playlist_id, :song_id
+            render json: @playlist_song
             # render :show
         else
             render json: @playlist_song.errors.full_messages, status: "422"
