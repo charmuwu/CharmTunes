@@ -1,19 +1,23 @@
 class Api::PlaylistsSongsController < ApplicationController
-    def index
+    def show
         # playlist = Playlist.find_by(id: params[:playlist_id])
         @playlists_songs = Playsong.where("playlist_id = #{params[:playlist_id]}")
-        render :index
+        if @playlists_songs
+            render :show
+        else
+            render json: @playlists_songs.errors.full_messages, status: "422"
+        end
     end
+    #do i need playsong index??? i don't think so?
     def create
-        # song = Song.find_by(id: params[:songid])
-        # playlist = Playlist.find_by(id: params[:playlistid])
         @playlist_song = Playsong.new(
             playlist_song_params
             # playlist_id: @playlist.id,
             # song_id:  @song.id
         )
         if @playlist_song.save
-            render :show
+            render json: @playlist_song, :playlist_id, :song_id
+            # render :show
         else
             render json: @playlist_song.errors.full_messages, status: "422"
         end
@@ -21,8 +25,8 @@ class Api::PlaylistsSongsController < ApplicationController
 
     def destroy
         playlist_song = Playsong.find_by(id: params[:id])
+        #how do i delete if i only have the playlist_id and song_id? and how should i make that route???
         playlist_song.delete
-        #render index?
         #render errors?
     end
     private
