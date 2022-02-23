@@ -21,6 +21,7 @@ const App = () => (
       <Route path="/" component={MusicContainer} />
       <Route exact path="/" component={SongsContainer.SongsComponent} />
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistShow} />
+      <ProtectedRoute exact path="/playlist/:playlistObjId" component={SongsContainer.AddSongs} />
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistForm}/>
       {/* <ProtectedRoute path="/playlist" component={PlaylistContainer} /> */}
     </div>

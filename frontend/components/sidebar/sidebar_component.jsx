@@ -15,7 +15,7 @@ class SidebarComponent extends React.Component{
     componentDidMount(){
         this.props.getPlaylists();
     }
-    componentDidUpdate(prevProps){
+    componentDidUpdate(prevProps){ //need to somehow rerender both sidebar and show once update is commited
         // if(prevProps.entities.users !== this.props.entities.users){
         //     console.log(prevProps);
         //     this.props.getPlaylists();
@@ -84,7 +84,7 @@ class SidebarComponent extends React.Component{
         let playlists;
         if(this.props.playlists){
             playlists = Object.values(this.props.playlists);
-            // console.log(playlists.keys());
+            
         }
         const ifLoggedIn = () => (
             

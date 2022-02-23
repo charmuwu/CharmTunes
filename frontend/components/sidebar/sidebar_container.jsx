@@ -4,7 +4,7 @@ import { getPlaylist, getPlaylists, deletePlaylist, newPlaylist} from '../../act
 
 const mSTP = state => {
     return{
-        playlists: state.playlists, //state.entities.playlists ?
+        playlists: state.entities.playlists, //state.entities.playlists ?
         currentUser: state.entities.users[state.session.currentUser]
     }
 };
