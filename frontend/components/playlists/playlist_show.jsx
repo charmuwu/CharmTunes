@@ -12,8 +12,13 @@ class PlaylistShow extends React.Component {
             creator: '',
         };
         this.handlePLClickOpen = this.handlePLClickOpen.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
-
+    handleDelete(){
+        let id = Number.parseInt(this.props.match.params.playlistObjId);
+        debugger
+        this.props.deletePlaylist(id);
+    }
     handlePLClickOpen(){
         const modal = document.getElementById("playlistModal");
         const modalbg = document.getElementById("modalBG");
@@ -84,7 +89,10 @@ class PlaylistShow extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                
+                <button onClick={this.handleDelete} to="/">
+                    Delete Playlist
+                </button>
                 <div>
                     add song
                     {/* add song button instead for now */}

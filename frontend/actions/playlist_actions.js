@@ -17,8 +17,7 @@ export const receiveErrors = (errors) => ({
 
 //I need songs in a specific playlistId
 
-export const getPlaysongs = playlistId => dispatch => fetchPlaysongs(playlistId)
-.then( playsongs => dispatch({type: RECEIVE_PLAYSONGS, playsongs}))
+
 
 export const getPlaylist = playlistId => dispatch => fetchPlaylist(playlistId)
     .then( playlist => dispatch({type: RECEIVE_PLAYLIST, playlist}));
@@ -35,8 +34,7 @@ export const updatePlaylist = (playlist, id) => dispatch => patchPlaylist(playli
     .then((playlist) => dispatch(getPlaylist(playlist)),
         error => dispatch(receiveErrors(error.responseJSON)));
 
-export const noMorePlaylist = () => dispatch => deletePlaylist()
-    .then(() => dispatch({
-    type: DELETE_PLAYLIST}));
+export const noMorePlaylist = (playlistId) => dispatch => deletePlaylist(playlistId)
+    .then(playlist => dispatch({type: DELETE_PLAYLIST, playlist}));
 
     

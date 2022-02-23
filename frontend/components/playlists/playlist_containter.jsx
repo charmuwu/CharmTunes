@@ -19,11 +19,11 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return{
         createPlaylist: formPlaylist => dispatch(newPlaylist(formPlaylist)),
-        updatePlaylist: (formPlaylist, id) => dispatch(updatePlaylist(formPlaylist, id)),
         getPlaylist: playlistId => dispatch(getPlaylist(playlistId)),
         getPlaylists: () => dispatch(getPlaylists()),
-        deletePlaylist: playlist => dispatch(noMorePlaylist(playlist)),
-        
+        updatePlaylist: (formPlaylist, id) => dispatch(updatePlaylist(formPlaylist, id)),
+        deletePlaylist: playlistId => dispatch(noMorePlaylist(playlistId)),
+
         fetchPlaysongs: playsongs => dispatch(getPlaysongs(playsongs)),
         
         getUser: userId => dispatch(getCurrentUser(userId)),
