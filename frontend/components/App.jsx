@@ -6,7 +6,6 @@ import SplashContainer from "./splash/splash_container";
 import MusicContainer from "./musicplayer/music_container";
 import {AuthRoute, ProtectedRoute} from '../utils/route_utils';
 import SongsContainer from "./songs/songs_container";
-import SidebarComponent from "./sidebar/sidebar_component";
 import SidebarContainer from "./sidebar/sidebar_container";
 import PlaylistContainer from "./playlists/playlist_containter";
 
@@ -20,7 +19,7 @@ const App = () => (
       </div>
       
       <Route path="/" component={MusicContainer} />
-      <Route exact path="/" component={SongsContainer} />
+      <Route exact path="/" component={SongsContainer.SongsComponent} />
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistShow} />
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistForm}/>
       {/* <ProtectedRoute path="/playlist" component={PlaylistContainer} /> */}
