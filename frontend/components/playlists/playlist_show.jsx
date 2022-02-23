@@ -32,7 +32,7 @@ class PlaylistShow extends React.Component {
             creator: userData.user.username,
         })));
     }
-    componentDidUpdate(prevProps){
+    componentDidUpdate(prevProps){ //need to somehow rerender both sidebar and show once update is commited
         if (prevProps.match.params.playlistObjId !== this.props.match.params.playlistObjId) {
             let id = Number.parseInt(this.props.match.params.playlistObjId);
 

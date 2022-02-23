@@ -6,11 +6,14 @@ import {getPlaysongs, getPlaylist, getPlaylists, newPlaylist, noMorePlaylist, up
 
 const mSTP = state => {
     return{
-        playlists: state.playlists,
         user: state.users,
-        // username: state.entities.users[playlists.creator_id].username,
         errors: state.errors.session,
+        playlists: state.playlists,
         playlist: state.playlist,
+        playlistInfo: {title: 'test redux',
+            description: 'test redux',
+            genre: 'testing redux',
+            artwork: '',}
     }
 };
 const mDTP = dispatch => {
@@ -20,12 +23,13 @@ const mDTP = dispatch => {
         getPlaylist: playlistId => dispatch(getPlaylist(playlistId)),
         getPlaylists: () => dispatch(getPlaylists()),
         deletePlaylist: playlist => dispatch(noMorePlaylist(playlist)),
+        
         fetchPlaysongs: playsongs => dispatch(getPlaysongs(playsongs)),
         
         getUser: userId => dispatch(getCurrentUser(userId)),
+        //getPlaysong: playlistId => dispatch(getPlaysongs(playlistId)),
     }
 };
-// export default connect(mSTP, mDTP)(PlaylistShow);
 export default {
     PlaylistShow: connect(mSTP, mDTP)(PlaylistShow),
     PlaylistForm: connect(mSTP, mDTP)(PlaylistForm)
