@@ -16,8 +16,8 @@ class PlaylistShow extends React.Component {
     }
     handleDelete(){
         let id = Number.parseInt(this.props.match.params.playlistObjId);
-        debugger
         this.props.deletePlaylist(id);
+        //somehow force a rerender of sidebar once delete is committed!!!
     }
     handlePLClickOpen(){
         const modal = document.getElementById("playlistModal");
