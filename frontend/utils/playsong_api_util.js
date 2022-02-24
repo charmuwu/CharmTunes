@@ -1,8 +1,9 @@
 export const fetchPlaysongs = playlistId => {
     return $.ajax({
         method: "GET",
-        url: `/api/playlist_songs/${playlistId}`
-    })
+        url: `/api/playlists/${playlistId}/playsongs`
+    }) //what should be the frontend route in order to
+    //pass the playlist id?
 }
 // export const fetchPlaysong = playsongId => {
 //     return $.ajax({
@@ -17,7 +18,7 @@ export const postPlaysong = playsong => {
         data: { playsong },
     })
 }
-export const deletePlaysong = (id) => {
+export const destroyPlaysong = (id) => {
     return $.ajax({
         method: 'DELETE',
         url: `/api/playlists_songs/${id}`,

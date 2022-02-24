@@ -1,4 +1,4 @@
-import { fetchPlaysongs, postPlaysong, deletePlaysong } from "../utils/playsong_api_util";
+import { fetchPlaysongs, postPlaysong, destroyPlaysong } from "../utils/playsong_api_util";
 
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
@@ -15,5 +15,5 @@ export const createPlaysong = (playlistId, songId) => dispatch => postPlaysong(p
         error => dispatch(receiveErrors(error.responseJSON)));
     // will have to fix?
 
-export const deletePlaysong = (playlistId, songId) => dispatch => deletePlaysong(playlistId, songId)
+export const deletePlaysong = (playlistId, songId) => dispatch => destroyPlaysong(playlistId, songId)
     .then (playsong => dispatch({type: DELETE_PLAYSONG, playsong})); // will have to fix ? 

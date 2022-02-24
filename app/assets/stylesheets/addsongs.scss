@@ -1,8 +1,53 @@
 .songAddContainer {
     display: flex;
-    justify-content: flex-end;
-    margin-top: -200px;
-    position: absolute;
-    right: 50%;
-    bottom: 30%;
+    // justify-content: flex-end;
+    margin-top: -400px;
+    // margin-top: 450px;
+    padding-left: 250px;
+    height: max-content;
+    background-color: rgb(37, 37, 37);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    // top: 0;
+}
+// small addsongtext
+.addSongTextContainer {
+
+}
+.addSongText1 {
+
+}
+.addSongText2 {
+
+}
+// song row here
+
+.addSongRow {
+    // display: flex;
+}
+.addSongList {
+    display: flex;
+    justify-content: space-between;
+}
+.addSongLeft {
+
+}
+.addSongArt {
+
+}
+.addSongTA {
+
+}
+.addSongTitle {
+    color: white;
+}
+.addSongAuthor {
+    color: rgb(131, 131, 131);
+}
+.addSongAlbum {
+
+}
+.addSongButton {
+
 }
