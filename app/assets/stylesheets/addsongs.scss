@@ -1,43 +1,70 @@
 .songAddContainer {
     display: flex;
-    // justify-content: flex-end;
-    margin-top: -400px;
-    // margin-top: 450px;
+    position: fixed;
+    flex-direction: column;
+    
     padding-left: 250px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
     height: max-content;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(22, 22, 22);
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: 90px;
+
+    z-index: 30;
+
     // top: 0;
 }
 // small addsongtext
 .addSongTextContainer {
-
+    margin-bottom: 15px;
 }
 .addSongText1 {
-
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.04em;
+    text-transform: none;
+  
 }
 .addSongText2 {
-
+    color: #b3b3b3;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    margin-top: 5px;
 }
 // song row here
 
 .addSongRow {
-    // display: flex;
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    margin-right: 20px;
+}
+.addSongRow:hover {
+    background-color: rgb(47, 47, 47);
+    border: 0px solid transparent;
+    border-radius: 5px;
 }
 .addSongList {
     display: flex;
     justify-content: space-between;
 }
 .addSongLeft {
-
+    display: flex;
+    flex-direction: row;
 }
 .addSongArt {
-
+    margin-left: 10px;
 }
 .addSongTA {
-
+    display: flex;
+    flex-direction: column;
 }
 .addSongTitle {
     color: white;
@@ -46,8 +73,35 @@
     color: rgb(131, 131, 131);
 }
 .addSongAlbum {
-
+    color: rgb(131, 131, 131);
+}
+.addSongAlbum:hover {
+    color: white;
+    text-decoration: underline;
 }
 .addSongButton {
+    display: inline;
+    align-items: center;
+    justify-self: flex-end;
+    margin-top: 10px;
+    padding: 0 24px;
+    padding-block: 5px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.76px;
+    line-height: 18px;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 20px;
+    height: 35px;
+    width: 90px;
+    transform: scale(1.00);
 
+    margin-right: 15px;
+}
+.addSongButton:hover {
+    transform: scale(1.06);
+    border: 1px solid white;
 }

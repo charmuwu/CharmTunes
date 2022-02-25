@@ -1,7 +1,7 @@
 .sidebarcontainer {
-    // display: grid;
     width: 205px;
-    height: 865px;
+    top: 70px;
+    bottom: 0;
     position: absolute;
     background: black;
     color: white;
@@ -9,8 +9,9 @@
     margin-left: -8px;
     margin-top: -79px;
     padding-top: 10px;
-    padding-left: 15px;
+    padding-left: 25px;
     font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    z-index: 46;
 }
 .sidebarnavs{
     color: #afafaf;
