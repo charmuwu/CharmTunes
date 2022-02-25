@@ -91,12 +91,8 @@ class PlaylistShow extends React.Component {
                 </div>
                 
                 <button onClick={this.handleDelete} to="/">
-                    Delete Playlist
+                    Delete
                 </button>
-                <div>
-                    add song
-                    {/* add song button instead for now */}
-                </div>
             </div>
         );
     }
