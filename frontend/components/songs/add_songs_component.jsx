@@ -38,11 +38,11 @@ class AddSongs extends React.Component{
                                 <div className='addSongArt'>{songObj.artwork}</div> {/* should be the same way  songs componenet is ddone*/}
                                 <div className='addSongTA'>
                                     <div className='addSongTitle'>{songObj.title}</div>
-                                    <div className='addSongAuthor'>{songObj.author}</div>
+                                    <div className='addSongAuthor'>{songObj.artist}</div>
                                 </div>
                             </div>
                             <div className='addSongAlbum'>{songObj.album}</div>
-                            <button className='addSongButton' onClick={this.handleClick}>Add</button>
+                            <button className='addSongButton' onClick={this.handleClick}>ADD</button>
                         </div>    
                     </div>
                 ))}
