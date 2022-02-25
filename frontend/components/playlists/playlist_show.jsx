@@ -90,7 +90,7 @@ class PlaylistShow extends React.Component {
                     </div>
                 </div>
                 
-                <button onClick={this.handleDelete} to="/">
+                <button onClick={this.handleDelete} to="/"> {/* delete doesn't properly go back to splash? */}
                     Delete
                 </button>
             </div>
