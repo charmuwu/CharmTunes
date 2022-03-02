@@ -143,7 +143,7 @@ class MusicComponent extends React.Component {
                     <div className="songTA">
                         <p className="songTitle">{currentSongTitle}</p>
                         <p className="songArtist">{currentSongArtist}</p>
-                    </div>
+                    </div> { /* add like button somewhere here for currently playing song */}
                 </div>
                 <div className="divcontrols">
                     <div className="divcontrolsbaby">
