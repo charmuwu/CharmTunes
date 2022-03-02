@@ -38,8 +38,6 @@ class Api::PlaylistsController < ApplicationController
             render :show
         else
             render json: @playlist.errors.full_messages, status: "422"
-            #render remove playlist from library
-            #or should i make a button appear or not appear?
         end
     end
 
