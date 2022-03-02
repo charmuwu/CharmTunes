@@ -10,3 +10,11 @@
 # end
 # json.partial! '/api/playlists/playlist', playlist: @playlist
 json.extract! @playlist, :id, :title, :genre, :creator_id, :description
+
+json.set! "songs" do
+    @playlist.songs.each do |song|
+        json.set! song.id do 
+            json.extract! song, :id, :title, :album, :artist, :song_url, :artwork
+        end
+    end
+end
