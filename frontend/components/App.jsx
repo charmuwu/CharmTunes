@@ -8,6 +8,7 @@ import {AuthRoute, ProtectedRoute} from '../utils/route_utils';
 import SongsContainer from "./songs/songs_container";
 import SidebarContainer from "./sidebar/sidebar_container";
 import PlaylistContainer from "./playlists/playlist_containter";
+import PlaylistSongs from "./playlists/playlistsongs";
 
 const App = () => (
   
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/" component={MusicContainer} />
       <Route exact path="/" component={SongsContainer.SongsComponent} />
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistShow} />
+      <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistSongs}> </ProtectedRoute>
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={SongsContainer.AddSongs} />
       <ProtectedRoute exact path="/playlist/:playlistObjId" component={PlaylistContainer.PlaylistForm}/>
       {/* <ProtectedRoute path="/playlist" component={PlaylistContainer} /> */}
