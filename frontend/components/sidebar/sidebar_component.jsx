@@ -25,9 +25,9 @@ class SidebarComponent extends React.Component{
         // on click, create a default data playlist. then send it over to playlist form to be updated.
         e.preventDefault();
 
-        let dummyPlaylist = {title: 'test playlist', 
-                        description: 'test description', 
-                        genre: 'test genre', 
+        let dummyPlaylist = {title: 'My Playlist', //My Playlist # new playlist # 
+                        description: '', //
+                        genre: '', // should we just get rid of genre? and put it on songs only?
                         artwork: ''};
         this.props.createPlaylist(dummyPlaylist)
         .then(() => this.props.history.push("/"));
@@ -68,8 +68,7 @@ class SidebarComponent extends React.Component{
                     {/* to divide */}
                 </div>
 
-                <Link className="sidebarnavs" to={`/playlist`}> 
-                    {/* /playlist/${id} how are we going to do this? */}
+                <Link className="sidebarnavs" to={`/login`}> 
                     <div className="createplicon"></div>
                     Create Playlist
 
