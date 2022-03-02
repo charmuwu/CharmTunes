@@ -10,13 +10,14 @@ class AddSongs extends React.Component{
         // get all the songs when mounted to show on the bottom
         this.props.getSongs();
     }
-    handleClick(){
+    handleClick(e){
         // creates the playsong relationship
         let playlistId = Number.parseInt(this.props.match.params.playlistObjId);
-        let songId = e.currentTarget.id; //will this even work?
+        let songId = Number.parseInt(e.currentTarget.attributes.songid.value);
         this.props.createPlaysong(playlistId, songId);
         // removes the div of the song just added from the recommended list
-        // let songToHide = document.getElementById( ) //get the songObj.id and shove it in here
+        // let songToHide = document.getElementById(songId); //can we add another part to this string?
+        // songToHide.style.display = "none";
     }
     render(){
         let songs;
@@ -31,8 +32,9 @@ class AddSongs extends React.Component{
                     <div className='addSongText2'>Add any song to your playlist!</div>
                 </div>
                 {/* list of songs */}
+                {/* may have to use css grid here instead... but this is okay for now */}
                 {songs.map( songObj => (
-                    <div className='addSongRow' key={songObj.id}>
+                    <div className='addSongRow' key={songObj.id} id='song'> {/* for the id add different string? */}
                         <div className='addSongList'>
                             <div className='addSongLeft'>
                                 <div className='addSongArt'>{songObj.artwork}</div> {/* should be the same way  songs componenet is ddone*/}
@@ -42,7 +44,7 @@ class AddSongs extends React.Component{
                                 </div>
                             </div>
                             <div className='addSongAlbum'>{songObj.album}</div>
-                            <button className='addSongButton' onClick={this.handleClick}>ADD</button>
+                            <button songid={songObj.id} className='addSongButton' onClick={this.handleClick}>ADD</button>
                         </div>    
                     </div>
                 ))}

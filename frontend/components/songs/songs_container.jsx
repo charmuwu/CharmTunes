@@ -18,4 +18,3 @@ export default {
     AddSongs: connect(mSTP, mDTP)(AddSongs),
     SongsComponent: connect(mSTP, mDTP)(SongsComponent)
 };
-// export default connect(mSTP,mDTP)(AddSongs);
